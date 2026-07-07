@@ -1,6 +1,6 @@
 # WorkBuddy 小红书冷启动 — Skill Index
 
-> 由 `cangjie-skill` 蒸馏，产出 6 个可执行 Agent Skills。
+> 从公开长文方法论整理而来，产出 6 个可执行 Agent Skills。
 > 处理时间: 2026-07-07
 
 ## 关于这篇文章
