@@ -1,41 +1,247 @@
 # WorkBuddy XHS Skills
 
-把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》蒸馏成的一组可执行 Agent Skills，并融合 yanliudreamer 小红书系列的起号、个人 IP、爆款内容与持续增长方法，同时提取 dbskill 中对小红书运营有用的标题、内容诊断、对标、共鸣、开头、文风与复盘模块。
+一套面向 Codex / Claude / WorkBuddy 等 Agent 的小红书冷启动 Skills。
 
-这不是文章摘要，而是一套面向 Codex / Claude 等 Agent 的小红书冷启动工作流：从变现定位、对标拆解、账号档案、选题库、初稿校准到排期复盘，每个环节都拆成了独立可调用的 skill。
+它把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》中的方法，整理成 6 个可执行 skill，并融合 yanliudreamer 小红书系列的起号、个人 IP、内容验证、持续增长方法，以及 dbskill 中对小红书运营有用的标题、内容诊断、对标、共鸣、开头、文风和复盘模块。
 
-原始 WorkBuddy 文章：[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
+这不是一份文章摘要，而是一套可以被 Agent 调用的内容运营工作流：从“我该做什么账号”到“这一周发什么”，从“标题怎么起”到“这篇初稿为什么不像真人”，从“低粉高数据内容怎么学”到“10-20 条之后如何收敛定位”，都拆成了独立可复用的技能模块。
 
-融合来源：
+原始 WorkBuddy 文章：
 
-- [小红书起号(上)：从0-20万粉，有关流量，账号定位，涨粉，选题](https://x.com/yanliudreamer/status/2063422060123320432)
-- [小红书运营 (下)：0-20万粉，有关变现，个人IP，长期主义](https://x.com/yanliudreamer/status/2064531701783732656)
-- [0基础小红书起号教程(上)｜从0到第一波流量（保姆级）](https://x.com/yanliudreamer/status/2071450551808938105)
-- [0基础小红书教程(中)｜爆款内容怎么做+真实案例！](https://x.com/yanliudreamer/status/2073292022316966217)
-- [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main)
+[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
+
+## 项目解决什么问题
+
+很多人做小红书时，第一反应是让 AI “帮我写一篇”或“帮我起 20 个标题”。问题是，如果没有账号定位、变现路径、用户需求、标题公式、内容验证和复盘机制，AI 很容易只给出一堆看起来像小红书、但不适合自己账号的内容。
+
+这个项目把小红书冷启动拆成 6 个环节：
+
+1. 先从变现和 offer 倒推账号定位。
+2. 再建立账号档案，让 Agent 记住你是谁、服务谁、怎么说话。
+3. 用前 10 条内容建立系统画像。
+4. 用标题公式和用户底层需求建立选题库。
+5. 对单篇初稿做人味化、结构诊断和发布前检查。
+6. 用 10-20 条内容数据复盘定位，并把结论写回账号档案。
+
+最终目标不是“让 AI 多写几篇”，而是让 Agent 成为一个能持续协助你做小红书账号的运营助手。
 
 ## 适合谁
 
 - 想从 0 开始做小红书账号，但不知道先做什么的人
-- 想用 WorkBuddy / Codex / Claude 建立内容生产流程的人
-- 想把小红书运营方法沉淀成可复用 Agent Skills 的人
+- 已经发了几篇内容，但定位、选题、标题和数据复盘都比较散的人
+- 想把自己的主业、副业、咨询、课程、社群、产品或服务做成小红书个人 IP 的人
+- 想用 Codex / Claude / WorkBuddy 建立长期内容生产流程的人
+- 想把公开文章里的方法论沉淀成可复用 Agent Skills 的人
 
-## Skills
+## 核心能力
 
-| Skill | 用途 |
-|---|---|
-| `wb-xhs-monetization-backsolve` | 从变现路径、timing、个人 IP 路线倒推账号定位和验证计划 |
-| `wb-xhs-low-follower-pattern` | 找低粉爆款样本，用点击率 × 停留时长 × 互动率、对标过滤和共鸣解码拆结构 |
-| `wb-xhs-account-profile` | 为 WorkBuddy 建立账号档案、信任资产、个人语言样本和人设垂直规则 |
-| `wb-xhs-topic-bank` | 用七类标题公式、标题触发器、五类用户底层需求建立选题库 |
-| `wb-xhs-humanize-compliance` | 对 AI 初稿做人味化、单一核心机制、5 秒开头和发布前表达检查 |
-| `wb-xhs-schedule-review` | 制定前 10 条/30 天排期，并用 10-20 条数据复盘定位、写回账号档案 |
+| 模块 | Skill | 能做什么 |
+|---|---|---|
+| 变现定位 | `wb-xhs-monetization-backsolve` | 盘点可售卖资产、offer、目标用户、信任路径和变现方式，再倒推账号定位 |
+| 对标学习 | `wb-xhs-low-follower-pattern` | 找低粉高数据样本，用点击率、停留、互动、对标过滤和共鸣原因拆内容结构 |
+| 账号记忆 | `wb-xhs-account-profile` | 建立账号档案、个人语言样本、可信主张、内容边界和长期记忆 |
+| 选题标题 | `wb-xhs-topic-bank` | 用七类选题公式、12 类标题触发器和五类用户需求生成选题库 |
+| 初稿校准 | `wb-xhs-humanize-compliance` | 诊断 AI 初稿，检查单一核心机制、5 秒开头、真人感和发布表达 |
+| 排期复盘 | `wb-xhs-schedule-review` | 制定前 10 条、7 天、30 天排期，并用 10-20 条内容数据复盘定位 |
 
-推荐顺序：
+## 推荐工作流
+
+### 从 0 开始做新号
 
 ```text
-变现/timing/个人IP → 账号档案 → 前10条排期 → 选题库 → 初稿校准 → 爆款拆解 → 10-20条复盘
+wb-xhs-monetization-backsolve
+-> wb-xhs-account-profile
+-> wb-xhs-schedule-review
+-> wb-xhs-topic-bank
+-> wb-xhs-humanize-compliance
+-> wb-xhs-low-follower-pattern
+-> wb-xhs-schedule-review
 ```
+
+你可以这样对 Agent 说：
+
+```text
+我想从 0 做一个小红书账号，未来想通过咨询和课程变现。
+请先帮我用 wb-xhs-monetization-backsolve 倒推定位。
+```
+
+### 已有账号重新梳理
+
+```text
+wb-xhs-schedule-review
+-> wb-xhs-monetization-backsolve
+-> wb-xhs-account-profile
+-> wb-xhs-low-follower-pattern
+-> wb-xhs-topic-bank
+```
+
+适合已经发过内容，但不知道为什么数据不稳定、粉丝不匹配、选题越来越散的账号。
+
+### 单篇内容优化
+
+```text
+wb-xhs-topic-bank
+-> wb-xhs-humanize-compliance
+-> wb-xhs-low-follower-pattern
+```
+
+适合已经有一个主题或初稿，需要把标题、开头、正文结构和互动点调得更适合小红书。
+
+## 6 个 Skills 详细介绍
+
+### 1. `wb-xhs-monetization-backsolve`
+
+小红书变现倒推账号定位。
+
+适合这些问题：
+
+- “我想做小红书，但不知道做什么赛道。”
+- “我有技能、经验或产品，但不知道怎么变成账号定位。”
+- “我该追热点快速起号，还是做长期个人 IP？”
+- “我想以后卖课、咨询、社群或服务，账号应该怎么设计？”
+
+它会输出：
+
+- 可售卖资产清单
+- offer 与信任路径
+- 主变现路径和副变现路径
+- 目标用户与内容承诺
+- 一句话定位
+- 5 类内容方向矩阵
+- 10-20 条内容验证计划
+
+### 2. `wb-xhs-low-follower-pattern`
+
+低粉高数据内容结构分析。
+
+适合这些问题：
+
+- “帮我找低粉高数据对标。”
+- “这些笔记为什么能火？”
+- “我的笔记曝光还行，但收藏评论低，问题在哪？”
+- “我能不能学习这个样本的结构？”
+
+它会分析：
+
+- 样本是否和你的变现路径相关
+- 标题和封面承诺负责什么点击理由
+- 开头三句如何制造停留
+- 正文结构如何组织信息
+- 评论、收藏、转发来自哪种用户动机
+- 哪些结构能迁移到你的账号素材里
+
+### 3. `wb-xhs-account-profile`
+
+账号档案和长期记忆。
+
+适合这些问题：
+
+- “让 Agent 记住我的账号定位。”
+- “每次 AI 写出来都不像我。”
+- “我想做个人 IP，但内容方向有点散。”
+- “哪些生活内容能发，哪些会影响主线？”
+
+它会沉淀：
+
+- 账号定位卡
+- 目标用户
+- 信任资产
+- 个人语言样本
+- 可信主张清单
+- 内容边界
+- 主线话题与延展话题
+- 数据日志和每周更新机制
+
+### 4. `wb-xhs-topic-bank`
+
+小红书选题库和标题公式。
+
+适合这些问题：
+
+- “帮我建一个选题库。”
+- “我每天不知道发什么。”
+- “给我 30 个小红书标题，但不要像营销号。”
+- “这个标题好点，但正文能给用户带走什么？”
+
+它会生成：
+
+- 痛点、数字、对比、稀缺、共鸣、资源、反常识七类选题
+- 12 类标题触发器标注
+- 情感共鸣、见证成长、获得新知、学习提升、身份表达五类需求标注
+- 标题五项检查
+- 本周优先发布选题
+
+标题检查包括：
+
+- 是否 20 个中文字符以内
+- 是否保留悬念
+- 是否击中真实痛点
+- 是否用了更大的用户词
+- 是否至少包含 2 个张力元素
+
+### 5. `wb-xhs-humanize-compliance`
+
+小红书初稿校准与发布前检查。
+
+适合这些问题：
+
+- “这篇 AI 味太重。”
+- “开头不抓人。”
+- “内容很干，但好像没人想看完。”
+- “帮我改得像真人一点。”
+- “发布前检查一下表达。”
+
+它会做：
+
+- AI 味来源标注
+- 内容四维诊断
+- 单一核心机制审计
+- 5 秒开头检查
+- 真实经历、具体场景、前后对比补强
+- 账号口吻校准
+- 发布前表达检查
+
+重点不是把句子改得更华丽，而是让内容更像账号本人能说出口的话，并且更容易被点开、看完、收藏和评论。
+
+### 6. `wb-xhs-schedule-review`
+
+排期与周复盘闭环。
+
+适合这些问题：
+
+- “帮我排一个 30 天小红书计划。”
+- “我是新号，前 10 条应该怎么发？”
+- “我已经发了 12 条，帮我判断定位要不要收敛。”
+- “本周复盘后，下周怎么调整？”
+
+它会输出：
+
+- 当前账号阶段判断
+- 前 10 条系统画像内容
+- 7 天或 30 天发布排期
+- 数据看板字段
+- 10-20 条后的定位复盘
+- 下周 3-5 个调整动作
+- 需要写回账号档案的结论
+
+## dbskill 提取了什么
+
+本项目没有把小红书 skills 并入 dbskill，也没有依赖 dbskill 的运行入口。处理方式是：提取 dbskill 中适合小红书运营的判断模块，转译到现有 `wb-xhs-*` skills 里。
+
+| dbskill 模块 | 提取内容 | 落到本项目 |
+|---|---|---|
+| `dbs-xhs-title` | 标题公式可追溯、标题触发器、20 字以内、保留悬念、真实痛点 | `wb-xhs-topic-bank` |
+| `dbs-content` | 内容质量诊断、产品和 offer 先于内容、不要只堆干货 | `wb-xhs-humanize-compliance`, `wb-xhs-monetization-backsolve` |
+| `dbs-benchmark` | 对标过滤：商业相关、机制可懂、可复用、少空谈赛道 | `wb-xhs-low-follower-pattern` |
+| `dbs-resonate` | 单一核心机制、内容为什么让人想表达或转述 | `wb-xhs-humanize-compliance`, `wb-xhs-low-follower-pattern` |
+| `dbs-spread` | 从样本反推传播原因 | `wb-xhs-low-follower-pattern`, `wb-xhs-topic-bank` |
+| `dbs-hook` | 5 秒开头：话题、继续看的理由、可信证据 | `wb-xhs-humanize-compliance` |
+| `dbs-ai-check` | 先诊断再改写，识别太顺、太满、太正确的 AI 文风 | `wb-xhs-humanize-compliance`, `wb-xhs-account-profile` |
+| 状态记录思路 | 周度结论写回账号档案，成为下一轮实验输入 | `wb-xhs-schedule-review`, `wb-xhs-account-profile` |
+
+详细说明见：
+
+[DBSKILL_EXTRACTION_NOTES.md](./DBSKILL_EXTRACTION_NOTES.md)
 
 ## 安装
 
@@ -51,6 +257,30 @@ cp -R wb-xhs-* ~/.codex/skills/
 
 ```bash
 cp -R wb-xhs-* ~/.claude/skills/
+```
+
+## 使用示例
+
+安装后，你可以直接用自然语言触发对应 skill。
+
+```text
+我想做小红书，但不知道选什么赛道，也不知道以后怎么变现。
+```
+
+```text
+帮我建一个小红书账号档案，让 WorkBuddy 以后记住我的定位和语气。
+```
+
+```text
+我的定位是给职场新人教 AI 写作，帮我建一个小红书选题库。
+```
+
+```text
+这篇小红书初稿 AI 味太重，帮我改得像真人一点。
+```
+
+```text
+我已经发了 12 条，数据有起伏，帮我判断要不要收敛定位。
 ```
 
 ## 目录结构
@@ -85,7 +315,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `INDEX.md`：技能总览、依赖关系和推荐使用顺序
 - `BOOK_OVERVIEW.md`：对原文章的方法论理解和批判
 - `DIGEST.md`：面向读者的精华说明
-- `FUSION_NOTES.md`：融合 yanliudreamer 系列后的方法补丁说明
+- `FUSION_NOTES.md`：融合 yanliudreamer 系列和 dbskill 模块后的方法补丁说明
 - `DBSKILL_EXTRACTION_NOTES.md`：从 dbskill 提取并转译到小红书 skills 的模块说明
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
@@ -94,13 +324,23 @@ cp -R wb-xhs-* ~/.claude/skills/
 
 ## 来源
 
+核心来源：
+
 - 原文：X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》
 - 链接：[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
 - 作者：文子 (@Eejoylove)
 - 发布时间：2026-07-06
 
+融合来源：
+
+- [小红书起号(上)：从0-20万粉，有关流量，账号定位，涨粉，选题](https://x.com/yanliudreamer/status/2063422060123320432)
+- [小红书运营 (下)：0-20万粉，有关变现，个人IP，长期主义](https://x.com/yanliudreamer/status/2064531701783732656)
+- [0基础小红书起号教程(上)｜从0到第一波流量（保姆级）](https://x.com/yanliudreamer/status/2071450551808938105)
+- [0基础小红书教程(中)｜爆款内容怎么做+真实案例！](https://x.com/yanliudreamer/status/2073292022316966217)
+- [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main)
+
 本仓库只保留短引用、方法论重写和可执行工作流，不包含原文全文。
 
 ## 免责声明
 
-这些 skills 是对公开文章中方法论的再组织和工程化表达，不代表原作者或 WorkBuddy 官方立场。平台规则、工具能力和账号增长结果都可能变化，请结合当前实际情况使用。
+这些 skills 是对公开文章中方法论的再组织和工程化表达，不代表原作者、WorkBuddy 或相关平台官方立场。平台规则、工具能力和账号增长结果都可能变化，请结合当前实际情况使用。
