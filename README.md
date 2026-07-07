@@ -18,7 +18,6 @@
 - 想从 0 开始做小红书账号，但不知道先做什么的人
 - 想用 WorkBuddy / Codex / Claude 建立内容生产流程的人
 - 想把小红书运营方法沉淀成可复用 Agent Skills 的人
-- 想学习如何用 `cangjie-skill` 把长文蒸馏成 skills 的人
 
 ## Skills
 
