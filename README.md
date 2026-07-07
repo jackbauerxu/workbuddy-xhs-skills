@@ -4,6 +4,8 @@
 
 这不是文章摘要，而是一套面向 Codex / Claude 等 Agent 的小红书冷启动工作流：从变现定位、对标拆解、账号档案、选题库、初稿校准到排期复盘，每个环节都拆成了独立可调用的 skill。
 
+原文链接：[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
+
 ## 适合谁
 
 - 想从 0 开始做小红书账号，但不知道先做什么的人
@@ -82,6 +84,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 ## 来源
 
 - 原文：X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》
+- 链接：[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
 - 作者：文子 (@Eejoylove)
 - 发布时间：2026-07-06
 
@@ -102,4 +105,3 @@ cp -R wb-xhs-* ~/.claude/skills/
 ## 免责声明
 
 这些 skills 是对公开文章中方法论的再组织和工程化表达，不代表原作者或 WorkBuddy 官方立场。平台规则、工具能力和账号增长结果都可能变化，请结合当前实际情况使用。
-
