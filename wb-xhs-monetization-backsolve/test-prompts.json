@@ -59,6 +59,13 @@
       "prompt": "我有三个方向都想做：职场、AI、旅行，能不能先都发？",
       "expected_behavior": "应激活本 skill 做主线、延展和小号判断，并建议用 10-20 条内容验证，不要一次性写死。",
       "notes": "多兴趣方向需要定位验证。"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "我想发很多 AI 干货，但还没想清楚产品和用户为什么付费，帮我先倒推定位。",
+      "expected_behavior": "应激活本 skill，先明确 offer、信任路径、付款理由和变现路径，再生成内容方向。",
+      "notes": "dbskill 产品/服务先于内容模块补充场景。"
     }
   ],
   "minimum_pass_rate": 0.8

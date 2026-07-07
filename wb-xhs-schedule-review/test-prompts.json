@@ -59,6 +59,13 @@
       "prompt": "我已经发了 12 条，数据有起伏，帮我判断要不要收敛定位。",
       "expected_behavior": "应激活本 skill，用 10-20 条测试结果比较主题在点击、停留、互动、关注上的差异。",
       "notes": "定位验证周期复盘。"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "帮我把本周小红书复盘整理成下周实验，并写回账号档案要更新的内容。",
+      "expected_behavior": "应激活本 skill，输出周度运营报告、有效/失效假设、下周实验和账号档案更新项。",
+      "notes": "dbskill 状态保存/恢复/报告思路转译场景。"
     }
   ],
   "minimum_pass_rate": 0.8

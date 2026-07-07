@@ -59,6 +59,13 @@
       "prompt": "我想发一篇旅行感悟，会不会影响我的职场号人设？",
       "expected_behavior": "应激活本 skill 判断该话题是否能被账号主线接住，必要时建议放小号或改写角度。",
       "notes": "人设延展边界判断。"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "帮我补一个账号档案，重点记录我的真实语言样本、能证明的观点和不能承诺的边界。",
+      "expected_behavior": "应激活本 skill，补充个人语言样本、可信主张清单、证据、offer 和表达边界。",
+      "notes": "dbskill 文风诊断和可信主张模块补充场景。"
     }
   ],
   "minimum_pass_rate": 0.8

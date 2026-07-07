@@ -59,6 +59,13 @@
       "prompt": "这个标题很好点，但我不知道正文能给用户带走什么。",
       "expected_behavior": "应激活本 skill 做三问校验；若回答不清，应降级或重写选题。",
       "notes": "标题入口与正文价值不匹配。"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "帮我给 AI 写作号出 20 个小红书标题，但每个标题都要标注用了哪类公式，控制在 20 字以内。",
+      "expected_behavior": "应激活本 skill，按标题触发器生成候选，并做可追溯、20字、悬念、痛点和张力检查。",
+      "notes": "dbskill 标题公式可追溯模块补充场景。"
     }
   ],
   "minimum_pass_rate": 0.8

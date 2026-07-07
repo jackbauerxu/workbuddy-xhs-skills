@@ -59,6 +59,13 @@
       "prompt": "我想把这篇干货写得更有情绪，但不要变成流水账。",
       "expected_behavior": "应激活本 skill，在补真实材料和情绪共鸣时保留结构与价值密度。",
       "notes": "真人感与信息密度平衡。"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "这篇像 AI 正确答案，观点太多，帮我先诊断核心机制和 5 秒开头，再改稿。",
+      "expected_behavior": "应激活本 skill，先做内容四维诊断、单一核心机制审计和5秒开头检查，再进行人味化改写。",
+      "notes": "dbskill 内容诊断、共鸣和开头模块补充场景。"
     }
   ],
   "minimum_pass_rate": 0.8

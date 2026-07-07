@@ -59,6 +59,13 @@
       "prompt": "我有一条突然爆了，是不是以后都照这个格式写？",
       "expected_behavior": "应激活本 skill 做内容结构拆解，但提醒至少连续验证多条，且顺着方向发而非机械复刻。",
       "notes": "单篇高表现内容不能直接当公式。"
+    },
+    {
+      "id": "should-trigger-05",
+      "type": "should_trigger",
+      "prompt": "我收藏了 8 篇低粉爆款，帮我筛掉不适合我变现路径的，再拆它们为什么有共鸣。",
+      "expected_behavior": "应激活本 skill，先做五重对标过滤，再从表达释放、使用动机、立场框架和第一批分享者角度解码共鸣。",
+      "notes": "dbskill 对标过滤和共鸣解码模块补充场景。"
     }
   ],
   "minimum_pass_rate": 0.8
