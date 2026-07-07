@@ -1,0 +1,52 @@
+{
+  "skill": "wb-xhs-schedule-review",
+  "version": "0.1.0",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我已经有 20 个选题了，帮我排一个 30 天小红书发布计划。",
+      "expected_behavior": "应激活本 skill，生成阶段、排期表和发布节奏。",
+      "notes": "典型排期。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "我发了 6 篇，数据有曝光、点赞、收藏，帮我复盘下周怎么发。",
+      "expected_behavior": "应激活本 skill，建立数据看板并输出下周调整动作。",
+      "notes": "典型复盘。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Create a weekly XHS content review board and next week's content calendar.",
+      "expected_behavior": "应激活本 skill，create review board and calendar.",
+      "notes": "英文触发。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这篇 AI 初稿改得更像我的语气。",
+      "expected_behavior": "不应激活本 skill，应激活 wb-xhs-humanize-compliance。",
+      "notes": "单篇改稿。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "我不知道账号该怎么赚钱，帮我定位。",
+      "expected_behavior": "不应激活本 skill，应激活 wb-xhs-monetization-backsolve。",
+      "notes": "兄弟 skill 混淆测试。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我只有 2 篇数据，能不能复盘？",
+      "expected_behavior": "可激活本 skill，但应说明样本太少，只做轻量观察，不下确定结论。",
+      "notes": "小样本边界。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+

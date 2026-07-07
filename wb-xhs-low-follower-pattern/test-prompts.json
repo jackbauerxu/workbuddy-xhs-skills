@@ -1,0 +1,52 @@
+{
+  "skill": "wb-xhs-low-follower-pattern",
+  "version": "0.1.0",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "darwin_compatible": true,
+  "test_cases": [
+    {
+      "id": "should-trigger-01",
+      "type": "should_trigger",
+      "prompt": "我已经确定做 AI 工具号了，帮我拆几个低粉爆款的结构。",
+      "expected_behavior": "应激活本 skill，指导搜索词、筛选条件和内容骨架拆解。",
+      "notes": "典型低粉爆款拆解。"
+    },
+    {
+      "id": "should-trigger-02",
+      "type": "should_trigger",
+      "prompt": "这些对标笔记里哪些标题和开头可以复制结构？",
+      "expected_behavior": "应激活本 skill，提取标题句式、开头三句和正文结构。",
+      "notes": "用户已有样本。"
+    },
+    {
+      "id": "should-trigger-03",
+      "type": "should_trigger",
+      "prompt": "Find the competitor content pattern for low-follower high-performing XHS posts.",
+      "expected_behavior": "应激活本 skill，输出低粉高数据样本筛选和结构分析。",
+      "notes": "英文触发。"
+    },
+    {
+      "id": "should-not-trigger-01",
+      "type": "should_not_trigger",
+      "prompt": "我还不知道做哪个赛道，帮我想想小红书定位。",
+      "expected_behavior": "不应激活本 skill，应激活 wb-xhs-monetization-backsolve。",
+      "notes": "定位未完成。"
+    },
+    {
+      "id": "should-not-trigger-02",
+      "type": "should_not_trigger",
+      "prompt": "帮我把这周 5 个选题排到日历里。",
+      "expected_behavior": "不应激活本 skill，应激活 wb-xhs-schedule-review。",
+      "notes": "兄弟 skill 混淆测试。"
+    },
+    {
+      "id": "edge-01",
+      "type": "edge_case",
+      "prompt": "我找到一个大号爆款，可以照着写吗？",
+      "expected_behavior": "可部分激活本 skill，但应提醒优先找低粉样本，并只拆结构不复制表达。",
+      "notes": "大号样本不是最佳输入。"
+    }
+  ],
+  "minimum_pass_rate": 0.8
+}
+
