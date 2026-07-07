@@ -66,6 +66,13 @@
       "prompt": "帮我把本周小红书复盘整理成下周实验，并写回账号档案要更新的内容。",
       "expected_behavior": "应激活本 skill，输出周度运营报告、有效/失效假设、下周实验和账号档案更新项。",
       "notes": "dbskill 状态保存/恢复/报告思路转译场景。"
+    },
+    {
+      "id": "should-trigger-visual-01",
+      "type": "should_trigger",
+      "prompt": "帮我排下周小红书计划，要标注哪些做单图、哪些做 8 页图文，以及视觉确认图和最终图的制作时间。",
+      "expected_behavior": "应激活本 skill，排期不只安排发布时间，还安排图文制作任务、视觉母版、确认图、最终图和视觉审查。",
+      "notes": "融合 xhs-visual-director 后的图文生产排期场景。"
     }
   ],
   "minimum_pass_rate": 0.8

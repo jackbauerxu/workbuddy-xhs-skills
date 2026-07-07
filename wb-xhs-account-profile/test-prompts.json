@@ -66,6 +66,13 @@
       "prompt": "帮我补一个账号档案，重点记录我的真实语言样本、能证明的观点和不能承诺的边界。",
       "expected_behavior": "应激活本 skill，补充个人语言样本、可信主张清单、证据、offer 和表达边界。",
       "notes": "dbskill 文风诊断和可信主张模块补充场景。"
+    },
+    {
+      "id": "should-trigger-visual-01",
+      "type": "should_trigger",
+      "prompt": "帮我建账号档案时，也把我的小红书封面风格、配色、字体、内页组件和禁用视觉风格记下来。",
+      "expected_behavior": "应激活本 skill，在账号档案中加入视觉身份规则，包括画幅、主/辅助风格、色彩令牌、字体系统、封面规则和视觉反模式。",
+      "notes": "融合 xhs-visual-director 后的视觉身份档案场景。"
     }
   ],
   "minimum_pass_rate": 0.8

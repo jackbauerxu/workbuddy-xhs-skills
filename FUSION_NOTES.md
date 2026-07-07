@@ -1,4 +1,4 @@
-# 融合说明: WorkBuddy 小红书 Skill × yanliudreamer 小红书系列 × dbskill 方法模块
+# 融合说明: WorkBuddy 小红书 Skill × yanliudreamer 小红书系列 × dbskill 方法模块 × 视觉导演模块
 
 更新时间: 2026-07-07
 
@@ -20,6 +20,12 @@
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main)
 
 提取方式不是合并项目，而是把 `dbs-xhs-title`、`dbs-content`、`dbs-benchmark`、`dbs-resonate`、`dbs-spread`、`dbs-hook`、`dbs-ai-check` 以及状态记录思路，转译为现有 `wb-xhs-*` skills 的检查项和输出字段。
+
+本次还提取了 xhs-visual-director-skill 中适合本项目的视觉导演模块:
+
+- [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)
+
+提取方式不是替代独立视觉导演 skill，而是把 10 问澄清、风格判断报告、8 页结构、统一视觉母版和视觉审查清单转译为现有小红书运营 skills 的视觉交付字段。
 
 ## 取长补短
 
@@ -53,6 +59,9 @@ Timing 判断是否值得现在做
 改稿要先诊断再润色
 对标要先过滤再学习
 周复盘要变成下一轮实验输入
+选题要能落成封面和多页图文
+账号档案要包含视觉身份
+排期要包含视觉生产节点
 ```
 
 ## Skill 更新摘要

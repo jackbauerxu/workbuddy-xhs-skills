@@ -66,6 +66,13 @@
       "prompt": "帮我给 AI 写作号出 20 个小红书标题，但每个标题都要标注用了哪类公式，控制在 20 字以内。",
       "expected_behavior": "应激活本 skill，按标题触发器生成候选，并做可追溯、20字、悬念、痛点和张力检查。",
       "notes": "dbskill 标题公式可追溯模块补充场景。"
+    },
+    {
+      "id": "should-trigger-visual-01",
+      "type": "should_trigger",
+      "prompt": "我的定位是 AI 效率工具号，帮我出一组选题库，每个选题都要附封面钩子、主视觉方向和适合做几页图文。",
+      "expected_behavior": "应激活本 skill，生成选题和标题，并为优先选题补充内容类型、传播目标、封面钩子、主视觉方向、推荐风格和页数建议。",
+      "notes": "融合 xhs-visual-director 后的视觉交付字段。"
     }
   ],
   "minimum_pass_rate": 0.8

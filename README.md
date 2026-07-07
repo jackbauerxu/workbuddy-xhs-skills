@@ -2,9 +2,9 @@
 
 一套面向 Codex / Claude / WorkBuddy 等 Agent 的小红书冷启动 Skills。
 
-它把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》中的方法，整理成 6 个可执行 skill，并融合 yanliudreamer 小红书系列的起号、个人 IP、内容验证、持续增长方法，以及 dbskill 中对小红书运营有用的标题、内容诊断、对标、共鸣、开头、文风和复盘模块。
+它把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》中的方法，整理成 6 个可执行 skill，并融合 yanliudreamer 小红书系列的起号、个人 IP、内容验证、持续增长方法，dbskill 中对小红书运营有用的标题、内容诊断、对标、共鸣、开头、文风和复盘模块，以及 xhs-visual-director-skill 的图文视觉导演方法。
 
-这不是一份文章摘要，而是一套可以被 Agent 调用的内容运营工作流：从“我该做什么账号”到“这一周发什么”，从“标题怎么起”到“这篇初稿为什么不像真人”，从“低粉高数据内容怎么学”到“10-20 条之后如何收敛定位”，都拆成了独立可复用的技能模块。
+这不是一份文章摘要，而是一套可以被 Agent 调用的内容运营工作流：从“我该做什么账号”到“这一周发什么”，从“标题怎么起”到“这篇初稿为什么不像真人”，从“低粉高数据内容怎么学”到“10-20 条之后如何收敛定位”，再到“这条内容如何落成 3:4 封面和 6-8 页图文”，都拆成了独立可复用的技能模块。
 
 原始 WorkBuddy 文章：
 
@@ -20,8 +20,9 @@
 2. 再建立账号档案，让 Agent 记住你是谁、服务谁、怎么说话。
 3. 用前 10 条内容建立系统画像。
 4. 用标题公式和用户底层需求建立选题库。
-5. 对单篇初稿做人味化、结构诊断和发布前检查。
-6. 用 10-20 条内容数据复盘定位，并把结论写回账号档案。
+5. 把优先选题补充成封面钩子、主视觉方向和图文页数建议。
+6. 对单篇初稿做人味化、结构诊断、图文拆页和发布前检查。
+7. 用 10-20 条内容数据复盘定位，并把内容和视觉结论写回账号档案。
 
 最终目标不是“让 AI 多写几篇”，而是让 Agent 成为一个能持续协助你做小红书账号的运营助手。
 
@@ -37,12 +38,12 @@
 
 | 模块 | Skill | 能做什么 |
 |---|---|---|
-| 变现定位 | `wb-xhs-monetization-backsolve` | 盘点可售卖资产、offer、目标用户、信任路径和变现方式，再倒推账号定位 |
-| 对标学习 | `wb-xhs-low-follower-pattern` | 找低粉高数据样本，用点击率、停留、互动、对标过滤和共鸣原因拆内容结构 |
-| 账号记忆 | `wb-xhs-account-profile` | 建立账号档案、个人语言样本、可信主张、内容边界和长期记忆 |
-| 选题标题 | `wb-xhs-topic-bank` | 用七类选题公式、12 类标题触发器和五类用户需求生成选题库 |
-| 初稿校准 | `wb-xhs-humanize-compliance` | 诊断 AI 初稿，检查单一核心机制、5 秒开头、真人感和发布表达 |
-| 排期复盘 | `wb-xhs-schedule-review` | 制定前 10 条、7 天、30 天排期，并用 10-20 条内容数据复盘定位 |
+| 变现定位 | `wb-xhs-monetization-backsolve` | 盘点可售卖资产、offer、目标用户、信任路径和变现方式，再倒推账号定位与视觉信任感 |
+| 对标学习 | `wb-xhs-low-follower-pattern` | 找低粉高数据样本，用点击率、停留、互动、对标过滤、共鸣原因和视觉骨架拆结构 |
+| 账号记忆 | `wb-xhs-account-profile` | 建立账号档案、个人语言样本、可信主张、内容边界、视觉身份和长期记忆 |
+| 选题标题 | `wb-xhs-topic-bank` | 用七类选题公式、12 类标题触发器、五类用户需求和封面钩子生成选题库 |
+| 初稿校准 | `wb-xhs-humanize-compliance` | 诊断 AI 初稿，检查单一核心机制、5 秒开头、真人感、图文拆页和发布表达 |
+| 排期复盘 | `wb-xhs-schedule-review` | 制定前 10 条、7 天、30 天排期，并把内容生产和视觉生产放进复盘闭环 |
 
 ## 推荐工作流
 
@@ -108,6 +109,7 @@ wb-xhs-topic-bank
 - 目标用户与内容承诺
 - 一句话定位
 - 5 类内容方向矩阵
+- 视觉定位假设
 - 10-20 条内容验证计划
 
 ### 2. `wb-xhs-low-follower-pattern`
@@ -129,6 +131,7 @@ wb-xhs-topic-bank
 - 正文结构如何组织信息
 - 评论、收藏、转发来自哪种用户动机
 - 哪些结构能迁移到你的账号素材里
+- 封面构图、主视觉、字体层级和页间节奏是否值得学习
 
 ### 3. `wb-xhs-account-profile`
 
@@ -148,6 +151,7 @@ wb-xhs-topic-bank
 - 信任资产
 - 个人语言样本
 - 可信主张清单
+- 视觉身份规则
 - 内容边界
 - 主线话题与延展话题
 - 数据日志和每周更新机制
@@ -169,6 +173,7 @@ wb-xhs-topic-bank
 - 12 类标题触发器标注
 - 情感共鸣、见证成长、获得新知、学习提升、身份表达五类需求标注
 - 标题五项检查
+- 封面钩子、主视觉方向和页数建议
 - 本周优先发布选题
 
 标题检查包括：
@@ -199,6 +204,8 @@ wb-xhs-topic-bank
 - 5 秒开头检查
 - 真实经历、具体场景、前后对比补强
 - 账号口吻校准
+- 6-8 页图文结构
+- 视觉可读性检查
 - 发布前表达检查
 
 重点不是把句子改得更华丽，而是让内容更像账号本人能说出口的话，并且更容易被点开、看完、收藏和评论。
@@ -219,6 +226,8 @@ wb-xhs-topic-bank
 - 当前账号阶段判断
 - 前 10 条系统画像内容
 - 7 天或 30 天发布排期
+- 单图/多页图文制作任务
+- 视觉确认图和最终图制作节点
 - 数据看板字段
 - 10-20 条后的定位复盘
 - 下周 3-5 个调整动作
@@ -242,6 +251,22 @@ wb-xhs-topic-bank
 详细说明见：
 
 [DBSKILL_EXTRACTION_NOTES.md](./DBSKILL_EXTRACTION_NOTES.md)
+
+## xhs-visual-director-skill 融合了什么
+
+本项目参考 [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)，提取小红书图文视觉导演方法，并转译为现有内容运营 skills 的视觉交付字段。
+
+| 视觉导演模块 | 提取内容 | 落到本项目 |
+|---|---|---|
+| 10 问澄清 | 完整图文项目前先明确目标、受众、观点、素材、风格、转化 | `wb-xhs-humanize-compliance`, `wb-xhs-schedule-review` |
+| 风格判断报告 | 内容类型、传播目标、读者情绪、信息密度、推荐风格 | `wb-xhs-topic-bank`, `wb-xhs-account-profile` |
+| 8 页结构 | 封面、痛点、认知、方法、案例、操作、总结、引导 | `wb-xhs-humanize-compliance`, `wb-xhs-schedule-review` |
+| 统一视觉母版 | 1080x1440px、3:4、边距、网格、字体、色彩、组件语言 | `wb-xhs-account-profile`, `wb-xhs-schedule-review` |
+| 视觉审查 | 封面冲击、手机端可读、信息层级、风格统一、避免 PPT 感 | `wb-xhs-humanize-compliance`, `wb-xhs-low-follower-pattern` |
+
+详细说明见：
+
+[VISUAL_DIRECTOR_FUSION_NOTES.md](./VISUAL_DIRECTOR_FUSION_NOTES.md)
 
 ## 安装
 
@@ -293,6 +318,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 ├── DIGEST.md
 ├── FUSION_NOTES.md
 ├── DBSKILL_EXTRACTION_NOTES.md
+├── VISUAL_DIRECTOR_FUSION_NOTES.md
 ├── GLOSSARY.md
 ├── verified.md
 ├── candidates/
@@ -317,6 +343,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `DIGEST.md`：面向读者的精华说明
 - `FUSION_NOTES.md`：融合 yanliudreamer 系列和 dbskill 模块后的方法补丁说明
 - `DBSKILL_EXTRACTION_NOTES.md`：从 dbskill 提取并转译到小红书 skills 的模块说明
+- `VISUAL_DIRECTOR_FUSION_NOTES.md`：从 xhs-visual-director-skill 提取并转译到现有 skills 的视觉模块说明
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
 - `candidates/`：候选方法论单元
@@ -338,6 +365,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - [0基础小红书起号教程(上)｜从0到第一波流量（保姆级）](https://x.com/yanliudreamer/status/2071450551808938105)
 - [0基础小红书教程(中)｜爆款内容怎么做+真实案例！](https://x.com/yanliudreamer/status/2073292022316966217)
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main)
+- [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)
 
 本仓库只保留短引用、方法论重写和可执行工作流，不包含原文全文。
 

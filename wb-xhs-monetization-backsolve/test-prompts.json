@@ -66,6 +66,13 @@
       "prompt": "我想发很多 AI 干货，但还没想清楚产品和用户为什么付费，帮我先倒推定位。",
       "expected_behavior": "应激活本 skill，先明确 offer、信任路径、付款理由和变现路径，再生成内容方向。",
       "notes": "dbskill 产品/服务先于内容模块补充场景。"
+    },
+    {
+      "id": "should-trigger-visual-01",
+      "type": "should_trigger",
+      "prompt": "我做 AI 咨询号，帮我从变现路径倒推定位，也判断账号应该走什么视觉信任感。",
+      "expected_behavior": "应激活本 skill，除变现定位外，还要根据咨询/课程/企业服务等路径给出视觉主风格、辅助风格和视觉定位假设。",
+      "notes": "融合 xhs-visual-director 后的视觉定位假设场景。"
     }
   ],
   "minimum_pass_rate": 0.8

@@ -66,6 +66,13 @@
       "prompt": "我收藏了 8 篇低粉爆款，帮我筛掉不适合我变现路径的，再拆它们为什么有共鸣。",
       "expected_behavior": "应激活本 skill，先做五重对标过滤，再从表达释放、使用动机、立场框架和第一批分享者角度解码共鸣。",
       "notes": "dbskill 对标过滤和共鸣解码模块补充场景。"
+    },
+    {
+      "id": "should-trigger-visual-01",
+      "type": "should_trigger",
+      "prompt": "我有 6 篇低粉爆款图文样本，帮我拆封面构图、页间节奏和哪些视觉结构值得学。",
+      "expected_behavior": "应激活本 skill，除了标题正文外，还要拆封面标题占比、主视觉、字体层级、强调色、内页结构和视觉一致性。",
+      "notes": "融合 xhs-visual-director 后的视觉骨架拆解场景。"
     }
   ],
   "minimum_pass_rate": 0.8
