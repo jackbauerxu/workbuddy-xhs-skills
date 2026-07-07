@@ -1,11 +1,7 @@
 ---
 name: wb-xhs-low-follower-pattern
 description: |
-  Use when the user has a Xiaohongshu niche and needs to find, compare, and extract reusable content structures from low-follower high-performing posts. Trigger phrases: "找对标", "低粉爆款", "拆爆款", "内容骨架", "competitor pattern", "viral post structure". Do not use before the monetization direction is clear.
-source_book: "《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》 文子"
-source_chapter: "第二步"
-tags: [xiaohongshu, benchmarking, content-pattern]
-related_skills: [wb-xhs-monetization-backsolve, wb-xhs-topic-bank]
+  Use when the user has a Xiaohongshu niche and needs to find, compare, and extract reusable content structures from low-follower high-performing posts, or diagnose why a post did or did not become a breakout using click rate, retention, and interaction signals. Trigger phrases: "找对标", "低粉爆款", "拆爆款", "内容骨架", "点击率", "停留时长", "互动率", "competitor pattern", "viral post structure". Do not use before the monetization direction is clear.
 ---
 
 # 低粉爆款内容骨架拆解
@@ -16,11 +12,17 @@ related_skills: [wb-xhs-monetization-backsolve, wb-xhs-topic-bank]
 >
 > — 文子, X Article, 2026-07-06
 
+> "一条内容能不能爆，本质看这个：点击率 × 停留时长 × 互动率。"
+>
+> — yanliudreamer, X Article, 2026-07-04
+
 ## I — 方法论骨架
 
 对新手来说，大号爆款往往混入了粉丝基础、品牌认知和历史权重，不一定能复制。更有价值的样本，是粉丝不多但近期数据突出的内容。
 
-这个 skill 的核心是把“我喜欢这篇”变成结构分析：关键词入口、发布时间、账号粉丝量、标题句式、开头三句、正文组织、封面承诺、评论区反馈、标签组合。
+这个 skill 的核心是把“我喜欢这篇”变成结构分析：关键词入口、发布时间、账号粉丝量、封面标题点击承诺、开头三句、正文组织、停留理由、收藏理由、评论区反馈、标签组合。
+
+yanliudreamer 系列补充了爆款判断公式：爆款不是绝对数据高，而是在小流量测试中明显优于平均。拆解时必须把样本拆成三段：点击率靠封面标题，停留时长靠开头和结构，互动率靠收藏、评论、转发背后的价值或共鸣。
 
 拆解的目标不是复制原文，而是提取可迁移骨架，再换成用户自己的经历、观点和素材。
 
@@ -41,12 +43,15 @@ related_skills: [wb-xhs-monetization-backsolve, wb-xhs-topic-bank]
 2. 用户想找对标账号，却只会收藏大号。
 3. 用户有 5-10 篇样本，希望让 Agent 总结规律。
 4. 用户要把一个爆款结构改写成自己的内容。
+5. 用户有一条笔记数据异常好或异常差，想知道卡在点击、停留还是互动。
 
 ### 语言信号
 
 - "帮我找对标"
 - "怎么拆小红书爆款"
 - "这个赛道低粉爆款怎么看"
+- "为什么这条没爆"
+- "点击率停留互动怎么看"
 - "extract viral structure"
 - "competitor content pattern"
 
@@ -66,10 +71,18 @@ related_skills: [wb-xhs-monetization-backsolve, wb-xhs-topic-bank]
    - 完成标准: 至少得到 5 个“粉丝不多但数据明显高于同类”的样本。
 
 3. **拆解内容骨架**
-   - 对每篇样本拆标题句式、开头三句、正文段落功能、结尾动作、标签。
+   - 对每篇样本拆封面承诺、标题句式、开头三句、正文段落功能、结尾动作、标签。
    - 完成标准: 输出一张样本对比表。
 
-4. **总结可迁移公式**
+4. **拆三指标杠杆**
+   - 判断样本主要强在点击率、停留时长还是互动率；记录对应证据。
+   - 完成标准: 每篇样本都有“入口强点 / 内容强点 / 互动强点”的判断。
+
+5. **识别五类爆款需求**
+   - 判断内容满足的是情感共鸣、见证成长、获得新知、学习提升、身份表达中的哪一类或哪几类。
+   - 完成标准: 不是只拆形式，也拆用户为什么愿意点、看、藏、评、转。
+
+6. **总结可迁移公式**
    - 提炼 3-5 个可复用标题模板和 1 个正文结构模板。
    - 完成标准: 模板不含原作者专属事实，可以替换成用户素材。
 
@@ -83,8 +96,10 @@ related_skills: [wb-xhs-monetization-backsolve, wb-xhs-topic-bank]
 ### 失败模式
 
 - 只看点赞，不看账号粉丝量和发布时间。
+- 只看最终数据，不拆点击、停留和互动分别发生在哪里。
 - 把原文表达搬进自己的笔记，导致账号缺少真实差异。
 - 样本太少就总结公式。
+- 看到一篇爆了就误以为找到公式，没有连续验证。
 
 ### 作者盲点
 
@@ -102,4 +117,3 @@ related_skills: [wb-xhs-monetization-backsolve, wb-xhs-topic-bank]
 - **验证通过**: V1 ✓ / V2 ✓ / V3 ✓
 - **测试通过率**: prompts prepared
 - **蒸馏时间**: 2026-07-07
-

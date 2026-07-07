@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-humanize-compliance",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -26,6 +26,13 @@
       "notes": "英文触发。"
     },
     {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "这篇开头不抓人，正文也有点散，帮我提升停留和互动。",
+      "expected_behavior": "应激活本 skill，检查钩子、真实背景、3 点以内核心信息和结尾互动引导。",
+      "notes": "融合后新增的内容结构编辑场景。"
+    },
+    {
       "id": "should-not-trigger-01",
       "type": "should_not_trigger",
       "prompt": "帮我建 35 个小红书选题。",
@@ -45,8 +52,14 @@
       "prompt": "帮我重写这篇文章，观点也可以换。",
       "expected_behavior": "不应默认使用本 skill；本 skill只做人味化和检查，不重做核心观点，需先确认范围。",
       "notes": "改稿范围边界。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我想把这篇干货写得更有情绪，但不要变成流水账。",
+      "expected_behavior": "应激活本 skill，在补真实材料和情绪共鸣时保留结构与价值密度。",
+      "notes": "真人感与信息密度平衡。"
     }
   ],
   "minimum_pass_rate": 0.8
 }
-

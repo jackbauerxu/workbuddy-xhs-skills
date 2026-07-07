@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-monetization-backsolve",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -26,6 +26,13 @@
       "notes": "英文触发。"
     },
     {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我不知道该追 AI 热点快速起号，还是做长期个人 IP，帮我判断小红书方向。",
+      "expected_behavior": "应激活本 skill，评估 timing、个人优势、长期表达能力和变现路径，再输出验证计划。",
+      "notes": "融合后新增的 timing + 个人 IP 定位场景。"
+    },
+    {
       "id": "should-not-trigger-01",
       "type": "should_not_trigger",
       "prompt": "帮我把这篇小红书文案去 AI 味。",
@@ -45,8 +52,14 @@
       "prompt": "我想做读书号，先帮我出 30 个选题吧。",
       "expected_behavior": "如果没有变现路径和目标用户，应先激活本 skill；若用户已提供定位，则转 wb-xhs-topic-bank。",
       "notes": "选题请求里隐藏定位缺口。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我有三个方向都想做：职场、AI、旅行，能不能先都发？",
+      "expected_behavior": "应激活本 skill 做主线、延展和小号判断，并建议用 10-20 条内容验证，不要一次性写死。",
+      "notes": "多兴趣方向需要定位验证。"
     }
   ],
   "minimum_pass_rate": 0.8
 }
-

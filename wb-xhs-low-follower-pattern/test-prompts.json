@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-low-follower-pattern",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -26,6 +26,13 @@
       "notes": "英文触发。"
     },
     {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我这条笔记曝光还可以但收藏评论很低，帮我看是点击、停留还是互动的问题。",
+      "expected_behavior": "应激活本 skill，用点击率、停留时长、互动率三段诊断内容卡点。",
+      "notes": "融合后新增的数据杠杆诊断场景。"
+    },
+    {
       "id": "should-not-trigger-01",
       "type": "should_not_trigger",
       "prompt": "我还不知道做哪个赛道，帮我想想小红书定位。",
@@ -45,8 +52,14 @@
       "prompt": "我找到一个大号爆款，可以照着写吗？",
       "expected_behavior": "可部分激活本 skill，但应提醒优先找低粉样本，并只拆结构不复制表达。",
       "notes": "大号样本不是最佳输入。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我有一条突然爆了，是不是以后都照这个格式写？",
+      "expected_behavior": "应激活本 skill 做内容结构拆解，但提醒至少连续验证多条，且顺着方向发而非机械复刻。",
+      "notes": "单篇高表现内容不能直接当公式。"
     }
   ],
   "minimum_pass_rate": 0.8
 }
-

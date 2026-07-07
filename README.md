@@ -1,10 +1,17 @@
 # WorkBuddy XHS Skills
 
-把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》蒸馏成的一组可执行 Agent Skills。
+把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》蒸馏成的一组可执行 Agent Skills，并融合 yanliudreamer 小红书系列的起号、个人 IP、爆款内容与持续增长方法。
 
 这不是文章摘要，而是一套面向 Codex / Claude 等 Agent 的小红书冷启动工作流：从变现定位、对标拆解、账号档案、选题库、初稿校准到排期复盘，每个环节都拆成了独立可调用的 skill。
 
-原文链接：[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
+原始 WorkBuddy 文章：[https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
+
+融合来源：
+
+- [小红书起号(上)：从0-20万粉，有关流量，账号定位，涨粉，选题](https://x.com/yanliudreamer/status/2063422060123320432)
+- [小红书运营 (下)：0-20万粉，有关变现，个人IP，长期主义](https://x.com/yanliudreamer/status/2064531701783732656)
+- [0基础小红书起号教程(上)｜从0到第一波流量（保姆级）](https://x.com/yanliudreamer/status/2071450551808938105)
+- [0基础小红书教程(中)｜爆款内容怎么做+真实案例！](https://x.com/yanliudreamer/status/2073292022316966217)
 
 ## 适合谁
 
@@ -17,17 +24,17 @@
 
 | Skill | 用途 |
 |---|---|
-| `wb-xhs-monetization-backsolve` | 从变现路径倒推账号定位、目标用户、内容方向和边界 |
-| `wb-xhs-low-follower-pattern` | 找低粉爆款样本，拆标题、开头、结构和标签 |
-| `wb-xhs-account-profile` | 为 WorkBuddy 建立账号档案和长期记忆 |
-| `wb-xhs-topic-bank` | 用七类标题公式建立可持续选题库 |
-| `wb-xhs-humanize-compliance` | 对 AI 初稿做人味化和发布前表达检查 |
-| `wb-xhs-schedule-review` | 制定发布排期，并用每周数据复盘下一轮内容 |
+| `wb-xhs-monetization-backsolve` | 从变现路径、timing、个人 IP 路线倒推账号定位和验证计划 |
+| `wb-xhs-low-follower-pattern` | 找低粉爆款样本，用点击率 × 停留时长 × 互动率拆结构 |
+| `wb-xhs-account-profile` | 为 WorkBuddy 建立账号档案、信任资产和人设垂直规则 |
+| `wb-xhs-topic-bank` | 用七类标题公式 + 五类用户底层需求建立选题库 |
+| `wb-xhs-humanize-compliance` | 对 AI 初稿做人味化、爆款结构检查和发布前表达检查 |
+| `wb-xhs-schedule-review` | 制定前 10 条/30 天排期，并用 10-20 条数据复盘定位 |
 
 推荐顺序：
 
 ```text
-变现倒推 → 低粉爆款拆解 → 账号档案 → 选题库 → 初稿校准 → 排期复盘
+变现/timing/个人IP → 账号档案 → 前10条排期 → 选题库 → 初稿校准 → 爆款拆解 → 10-20条复盘
 ```
 
 ## 安装
@@ -54,6 +61,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 ├── INDEX.md
 ├── BOOK_OVERVIEW.md
 ├── DIGEST.md
+├── FUSION_NOTES.md
 ├── GLOSSARY.md
 ├── verified.md
 ├── candidates/
@@ -76,6 +84,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `INDEX.md`：技能总览、依赖关系和推荐使用顺序
 - `BOOK_OVERVIEW.md`：对原文章的方法论理解和批判
 - `DIGEST.md`：面向读者的精华说明
+- `FUSION_NOTES.md`：融合 yanliudreamer 系列后的方法补丁说明
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
 - `candidates/`：候选方法论单元

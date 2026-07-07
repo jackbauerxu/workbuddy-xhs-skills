@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-schedule-review",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -26,6 +26,13 @@
       "notes": "英文触发。"
     },
     {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我是新号，帮我设计前10条笔记，让系统知道我是一个完整的人。",
+      "expected_behavior": "应激活本 skill，按自我背景/经历、方法/经验、踩坑/反思、情绪/观点设计前10条。",
+      "notes": "融合后新增的系统画像建立期。"
+    },
+    {
       "id": "should-not-trigger-01",
       "type": "should_not_trigger",
       "prompt": "帮我把这篇 AI 初稿改得更像我的语气。",
@@ -45,8 +52,14 @@
       "prompt": "我只有 2 篇数据，能不能复盘？",
       "expected_behavior": "可激活本 skill，但应说明样本太少，只做轻量观察，不下确定结论。",
       "notes": "小样本边界。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我已经发了 12 条，数据有起伏，帮我判断要不要收敛定位。",
+      "expected_behavior": "应激活本 skill，用 10-20 条测试结果比较主题在点击、停留、互动、关注上的差异。",
+      "notes": "定位验证周期复盘。"
     }
   ],
   "minimum_pass_rate": 0.8
 }
-

@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-account-profile",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -26,6 +26,13 @@
       "notes": "英文触发。"
     },
     {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "我想做个人 IP，但内容里有职场、AI、旅行，帮我整理人设垂直和账号档案。",
+      "expected_behavior": "应激活本 skill，整理信任资产、主线话题、延展话题和小号边界。",
+      "notes": "融合后新增的人设垂直场景。"
+    },
+    {
       "id": "should-not-trigger-01",
       "type": "should_not_trigger",
       "prompt": "帮我找 10 个低粉爆款对标。",
@@ -45,8 +52,14 @@
       "prompt": "帮我写简介：我是一个教 AI 的文科生。",
       "expected_behavior": "若只是简介可直接写；若用户要长期记忆和内容边界，应激活本 skill。",
       "notes": "单次简介与账号档案边界。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "我想发一篇旅行感悟，会不会影响我的职场号人设？",
+      "expected_behavior": "应激活本 skill 判断该话题是否能被账号主线接住，必要时建议放小号或改写角度。",
+      "notes": "人设延展边界判断。"
     }
   ],
   "minimum_pass_rate": 0.8
 }
-

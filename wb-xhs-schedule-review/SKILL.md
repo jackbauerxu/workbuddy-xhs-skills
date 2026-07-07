@@ -1,11 +1,7 @@
 ---
 name: wb-xhs-schedule-review
 description: |
-  Use when the user wants a Xiaohongshu posting calendar, weekly review board, or data-based next-step plan. Trigger phrases: "排期", "复盘", "30 天计划", "发了没数据", "weekly review", "content calendar", "XHS schedule". Do not use for first-draft editing or initial account positioning.
-source_book: "《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》 文子"
-source_chapter: "第七步 / 最后总结"
-tags: [xiaohongshu, schedule, review]
-related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
+  Use when the user wants a Xiaohongshu posting calendar, weekly review board, first-10-post launch plan, 10-20-post positioning test, or data-based next-step plan. Trigger phrases: "排期", "复盘", "30 天计划", "前10条", "10-20条测试", "发了没数据", "weekly review", "content calendar", "XHS schedule". Do not use for first-draft editing or initial account positioning.
 ---
 
 # 小红书排期与周复盘闭环
@@ -16,11 +12,17 @@ related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
 >
 > — 文子, X Article, 2026-07-06
 
+> "小红书前10条 = 系统画像建立期。"
+>
+> — yanliudreamer, X Article, 2026-06-29
+
 ## I — 方法论骨架
 
 小红书冷启动不是单篇内容问题，而是连续发布和反馈问题。排期解决“今天发什么、什么时候发、发哪类”；复盘解决“数据说明了什么、下一周怎么改”。
 
 文章建议把新号分成阶段：先让账号行为自然，再让平台识别标签，再逐渐稳定内容和商业转化。每周记录曝光、点击、点赞、收藏、评论、分享、涨粉等指标，并让 WorkBuddy 把结论写回记忆。
+
+yanliudreamer 系列补充了冷启动实验节奏：前 10 条是系统画像建立期，建议组合自我背景/经历、方法/经验、踩坑/反思、情绪/观点；定位不要只靠想，而要用 10-20 条内容验证。复盘时不要只问“爆没爆”，而要判断系统是否认识你、哪类内容更容易被推荐、哪类内容更容易被互动和关注。
 
 排期和复盘合在一起，才能把内容系统从灵感驱动变成数据驱动。
 
@@ -41,6 +43,8 @@ related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
 2. 用户发了几篇后不知道数据该怎么解释。
 3. 用户想从冷启动进入稳定更新。
 4. 用户想让 WorkBuddy 记住每周复盘规律。
+5. 用户刚开号，想设计前 10 条内容。
+6. 用户发了 10-20 条，想根据数据收敛定位。
 
 ### 语言信号
 
@@ -48,6 +52,8 @@ related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
 - "发了几篇没数据怎么办"
 - "做个复盘表"
 - "30 day XHS plan"
+- "前10条怎么发"
+- "10-20条后怎么复盘"
 - "weekly content review"
 
 ### 与相邻 skill 的区分
@@ -58,19 +64,27 @@ related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
 ## E — 可执行步骤
 
 1. **确定阶段**
-   - 判断账号处于养号、标签识别、内容测试、稳定转化中的哪一阶段。
+   - 判断账号处于画像建立、方向测试、标签识别、内容放大、稳定转化中的哪一阶段。
    - 完成标准: 每个阶段有不同发布目标。
 
-2. **生成排期表**
+2. **设计前 10 条画像内容**
+   - 新号优先安排 3 条自我背景/经历、3 条方法/经验、2 条踩坑/反思、2 条情绪/观点。
+   - 完成标准: 系统和用户都能看见一个“完整的人”，而不是单一教程机器。
+
+3. **生成排期表**
    - 按周安排内容类型、发布时间、标题方向、制作任务。
    - 完成标准: 至少给出 7 天计划；需要时扩展到 30 天。
 
-3. **建立数据看板**
-   - 记录曝光、点击率、点赞、收藏、评论、分享、涨粉、发布时间、内容类型。
+4. **建立数据看板**
+   - 记录曝光、点击率、停留、点赞、收藏、评论、分享、关注、私信、发布时间、内容类型。
    - 完成标准: 用户能每周填表。
 
-4. **复盘并回写记忆**
-   - 判断最佳类型、最佳时间、失败原因、评论区新选题。
+5. **10-20 条后收敛定位**
+   - 比较不同主题在点击、停留、互动、关注上的差异，判断主方向和备选方向。
+   - 完成标准: 不是凭感觉定位，而是用一轮实验数据收敛。
+
+6. **复盘并回写记忆**
+   - 判断最佳类型、最佳时间、失败原因、评论区新选题、爆款后是否应顺着方向继续发。
    - 完成标准: 输出下周 3-5 个具体调整动作，并建议写入账号档案。
 
 ## B — 边界
@@ -85,6 +99,8 @@ related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
 - 排期过满，导致新手无法执行。
 - 只看点赞，不看收藏、评论、点击和涨粉关系。
 - 复盘只写感受，没有转成下周动作。
+- 发了 3 篇没起色就放弃，样本太少无法判断方向。
+- 一篇爆了就突然乱发，打断系统对账号的归类。
 
 ### 作者盲点
 
@@ -102,4 +118,3 @@ related_skills: [wb-xhs-topic-bank, wb-xhs-humanize-compliance]
 - **验证通过**: V1 ✓ / V2 ✓ / V3 ✓
 - **测试通过率**: prompts prepared
 - **蒸馏时间**: 2026-07-07
-

@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-topic-bank",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -26,6 +26,13 @@
       "notes": "英文触发。"
     },
     {
+      "id": "should-trigger-04",
+      "type": "should_trigger",
+      "prompt": "帮我把选题按情感共鸣、见证成长、获得新知、学习提升、身份表达分一下。",
+      "expected_behavior": "应激活本 skill，用五类用户底层需求组织选题，并做发帖前三问校验。",
+      "notes": "融合后新增的需求分层场景。"
+    },
+    {
       "id": "should-not-trigger-01",
       "type": "should_not_trigger",
       "prompt": "帮我把这篇笔记改得更像真人。",
@@ -45,8 +52,14 @@
       "prompt": "帮我出 50 个小红书标题，我还没想好给谁看。",
       "expected_behavior": "不应直接生成，应先追问目标用户或转 wb-xhs-monetization-backsolve。",
       "notes": "定位缺失。"
+    },
+    {
+      "id": "edge-02",
+      "type": "edge_case",
+      "prompt": "这个标题很好点，但我不知道正文能给用户带走什么。",
+      "expected_behavior": "应激活本 skill 做三问校验；若回答不清，应降级或重写选题。",
+      "notes": "标题入口与正文价值不匹配。"
     }
   ],
   "minimum_pass_rate": 0.8
 }
-
