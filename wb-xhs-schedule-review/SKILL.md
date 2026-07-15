@@ -6,6 +6,10 @@ description: |
 
 # 小红书排期与周复盘闭环
 
+## Runtime bootstrap and update gate
+
+Before using any external program, browser automation, package, API client, or local script, apply [`../RUNTIME_UPDATE_POLICY.md`](../RUNTIME_UPDATE_POLICY.md). Check the current version, automatically install or update a missing or outdated dependency to the latest stable supported version, run its diagnostic, and only then continue. Text-only work needs no installation. Never use `sudo` or claim success without verification.
+
 ## R — 原文
 
 > "排期 + 复盘，让它帮你记。"
