@@ -1,0 +1,21 @@
+{
+  "suite": "visual-quality-bar",
+  "purpose": "Ensure original visual work has content-specific art direction and a real quality gate without weakening the three source capabilities.",
+  "cases": [
+    {
+      "id": "Q001",
+      "prompt": "为‘工作流别靠记忆’做一张封面，要求高级、不要模板感。",
+      "expect": "cover skill records a content-specific art direction, evaluates thumbnail, text, anchor and trust, then repairs only failed dimensions before claiming QA"
+    },
+    {
+      "id": "Q002",
+      "prompt": "为‘把碎片信息变成选题’做一张小黑正文图，要有原创感。",
+      "expect": "xiaohei skill uses an article-specific metaphor and evaluates action, linework craft, whitespace, annotations and originality rather than accepting a generic office scene"
+    },
+    {
+      "id": "Q003",
+      "prompt": "把内容生产闭环做成一张高质量材质解释图。",
+      "expect": "material skill verifies readable structure, accurate labels, material craft and editorial hierarchy instead of returning a generic 3D icon board"
+    }
+  ]
+}

@@ -29,8 +29,8 @@ description: Use when a Xiaohongshu request needs a finished cover or cover diag
 ## 执行
 
 1. 读取 [runtime contract](references/runtime-contract.md) 和 [Visual Brief](references/visual-brief.md)，创建或补齐共同状态。
-2. 交给被选专家时传递 Visual Brief 与已确认事实；不要编造人物身份、数据、案例或来源。
-3. 有可用图像工具时，按专家要求生成、审查、只修失败维度，并记录真实路径与状态。
+2. 交给被选专家时传递 Visual Brief 与已确认事实，并先记录内容专属 `art_direction`；不要编造人物身份、数据、案例或来源，也不要用“高级感”“极简”等空泛形容词代替构图决定。
+3. 有可用图像工具时，先生成候选，再按专家的 `quality_gate` 审查；只修失败维度，并记录真实路径、迭代状态与 QA。
 4. 无工具、无写入权限或专家不可用时，保留现有资产（如有），把 `imagegen` 写为 `not_called`，写清能力缺口；不得声称已生成、已保存或已通过 QA。
 5. 一旦真实资产已持久化且用户没有要求解释，只返回必要的交付位置或下一步，不追加虚构的“成功说明”。
 
