@@ -1,7 +1,7 @@
 ---
 name: wb-xhs-topic-bank
 description: |
-  Use when the user has positioning and wants a reusable Xiaohongshu topic/title bank instead of asking AI to freely brainstorm, especially to map topics to user needs such as emotional resonance, growth proof, new insight, learning value, or identity expression. Trigger phrases: "选题库", "标题公式", "每天发什么", "批量选题", "爆款需求", "XHS topic bank", "title formulas". Do not use before account positioning and target audience are known.
+  Use when the user wants a reusable Xiaohongshu topic/title bank instead of asking AI to freely brainstorm, especially to map topics to user needs such as emotional resonance, growth proof, new insight, learning value, or identity expression. Trigger phrases: "选题库", "标题公式", "每天发什么", "批量选题", "爆款需求", "XHS topic bank", "title formulas".
 ---
 
 # 小红书七类选题库
@@ -72,7 +72,8 @@ xhs-visual-director-skill 补充了“标题必须能变成封面”的要求：
 
 1. **读取账号约束**
    - 确认目标用户、赛道关键词、变现路径、人设语气、禁区。
-   - 完成标准: 没有这些信息时先调用账号档案或定位 skill。
+   - 信息不完整时只问一个范围明确的定位问题，并先给出“暂定标题公式”或“暂定选题模板”；用方括号占位、标为“暂定”，不得把占位数字或结论写成已证实事实，也不得仅因定位不完整而改派。
+   - If confirmed positioning is absent from the current request, start the response with `暂定标题公式` (or `Provisional title formulas`) even when the user asks only for formulas. Do not infer that brackets alone communicate provisional status.
 
 2. **建立七类公式**
    - 为痛点、数字、对比、稀缺、共鸣、资源、反常识各生成 3-5 个模板。
@@ -110,8 +111,7 @@ xhs-visual-director-skill 补充了“标题必须能变成封面”的要求：
 
 ### 不要在以下情况使用
 
-- 用户没有定位或目标人群。
-- 用户需要完整正文，而不是选题和标题。
+- 用户要求完整正文，而不是选题和标题。
 
 ### 失败模式
 

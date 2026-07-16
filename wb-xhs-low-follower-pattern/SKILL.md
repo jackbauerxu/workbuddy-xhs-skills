@@ -1,7 +1,7 @@
 ---
 name: wb-xhs-low-follower-pattern
 description: |
-  Use when the user has a Xiaohongshu niche and needs to find, compare, and extract reusable content structures from low-follower high-performing posts, or diagnose why a post did or did not become a breakout using click rate, retention, and interaction signals. Trigger phrases: "找对标", "低粉爆款", "拆爆款", "内容骨架", "点击率", "停留时长", "互动率", "competitor pattern", "viral post structure". Do not use before the monetization direction is clear.
+  Use when the user needs to find, compare, and extract reusable content structures from low-follower high-performing Xiaohongshu posts, or diagnose why a post did or did not become a breakout using click rate, retention, and interaction signals. Trigger phrases: "找对标", "低粉爆款", "拆爆款", "内容骨架", "点击率", "停留时长", "互动率", "competitor pattern", "viral post structure".
 ---
 
 # 低粉爆款内容骨架拆解
@@ -114,7 +114,7 @@ xhs-visual-director-skill 补充了视觉拆解维度：低粉高数据样本不
 
 ### 不要在以下情况使用
 
-- 用户还没确定服务人群或变现路径，应先调用定位 skill。
+- 用户要求纯粹的账号定位或 offer 设计，应使用定位 skill；但对标请求不因定位尚未完整而改派。缺少赛道时，询问赛道关键词或可访问样本，并明确本次没有搜索或虚构找到样本。
 - 用户要求逐字模仿某篇内容，应提醒只提取结构和逻辑。
 
 ### 失败模式

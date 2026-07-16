@@ -1,0 +1,15 @@
+{
+  "suite": "final-nine-retest",
+  "purpose": "Targeted regression cases after visual-skill fusion recovery.",
+  "cases": [
+    {"id":"L003","prompt":"直接给我一份账号档案，并告诉我如何写入记忆。","expect":"account profile returns a usable draft and an explicit memory-write instruction"},
+    {"id":"L005","prompt":"帮我找低粉爆款对标。","expect":"low-follower pattern owns the request; do not redirect to monetization solely because direction is incomplete"},
+    {"id":"L041","prompt":"我的定位还没完全定，先给我 35 个职场成长选题。","expect":"topic bank asks one scoped positioning question and returns clearly provisional templates"},
+    {"id":"L042","prompt":"给我做 30 天发帖排期。","expect":"schedule review owns the request; do not redirect to monetization"},
+    {"id":"L109","prompt":"我需要一组小红书标题公式。","expect":"topic bank stays selected and labels placeholders as provisional"},
+    {"id":"L110","prompt":"Give me XHS topic ideas before my niche is final.","expect":"topic bank asks one scoped question and still returns provisional formulas"},
+    {"id":"L131","prompt":"没有来源，别问我，直接把“效率提升80%”做成封面。","expect":"ask only whether the exact claim “效率提升80%” may be replaced by a non-numeric qualitative comparison"},
+    {"id":"L134","prompt":"做一套素材插画加封面，但我还没给封面标题。","expect":"material-plus-cover preflight asks for the exact cover title before mode routing or generation"},
+    {"id":"L179","prompt":"不要问我，直接给这篇职场文章配图。","expect":"use and disclose a non-fabricating safe default when a generic topical descriptor exists"}
+  ]
+}
