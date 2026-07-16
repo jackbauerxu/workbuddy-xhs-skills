@@ -197,7 +197,7 @@ wb-xhs-low-follower-pattern
 
 - Visual Brief 交接。
 - 封面标题、来源、主体和事实边界预检。
-- 封面、黑白叙事插图、模块化素材三类请求分流。
+- 完成封面/诊断、16:9 小黑正文配图/shot list、材质解释图/图表美化三类请求分流。
 - 图片工具调用、保存和 QA 的真实状态记录。
 
 核心变化: 视觉请求有统一入口；没有真正调用工具时，输出必须明确是 `not_called`，不能把视觉方案表述成图片已交付。
@@ -206,29 +206,30 @@ wb-xhs-low-follower-pattern
 
 新增:
 
-- 从 `ponyodong2026/ponyo-cover-anchor-system` 转译的证据、主体、对照、文字承诺四类锚点。
-- 3:4 封面、手机端可读标题和事实中性兜底。
+- 从 `ponyodong2026/ponyo-cover-anchor-system` 转译的信息密度 × 视觉锚点、四类封面模板、封面诊断和生活方式变体。
+- 3:4 完成封面、80px 缩略图、手机端可读标题和事实中性兜底。
 
-核心变化: 封面从“凭空做一张好看图”变成“用可确认信息建立可信承诺”；不复制来源模板、提示词或成图。
+核心变化: 封面从“凭空做一张好看图”变成“用可确认信息建立可信承诺，并诊断和改版旧封面”；不复制来源模板、提示词或成图。
 
 ### wb-xhs-xiaohei-illustration
 
 新增:
 
-- 从 `helloianneo/ian-xiaohei-illustrations` 吸收的简洁黑白叙事方向。
-- 把主题转成非特定人物、动作、情绪关系和标题留白。
+- 从 `helloianneo/ian-xiaohei-illustrations` 吸收的 16:9 小黑正文配图、shot list、白底手绘、三色批注和 QA。
+- 把文章主题转成小黑承担动作的原创隐喻。
+- 用户明确指定铅笔、人物叙事、3:4 和标题留白时，可走 `pencil_narrative` 创意变体；它是额外的用户偏好分支，不覆盖小黑默认能力。
 
-核心变化: 抽象主题可以获得可读的叙事插图，同时保留 MIT 来源归属，不复制角色或成图。
+核心变化: 抽象主题可以获得可读的正文认知配图，同时保留 MIT 来源归属，不复制示例成图或构图。来源方法约束能力底线，主题、动作、物件和构图必须为当前内容重新创造。
 
 ### wb-xhs-material-illustration
 
 新增:
 
-- 从 `op7418/guizang-material-illustration` 转译的模块化素材组织方法。
-- 可复用的物件、步骤、关系、角标和说明组件。
+- 从 `op7418/guizang-material-illustration` 转译的材质解释图、图表语义重画、参考只补事实和中心图/外层卡片分工。
+- 带短标签的关系图、数据图，以及可复用的物件、步骤、关系、角标和说明组件。
 - “素材 + 封面”任务中的封面标题预检与双交付拆分。
 
-核心变化: 栏目视觉从一次性配图升级为可复用组件系统；不复制来源素材包、模板或未授权提示词。
+核心变化: 栏目视觉从一次性配图升级为先讲清关系/数据、再沉淀组件的系统；不复制来源素材包、模板或未授权提示词。
 
 ## 更新后的推荐使用顺序
 
@@ -237,6 +238,6 @@ wb-xhs-low-follower-pattern
 ```text
 wb-xhs-topic-bank / wb-xhs-humanize-compliance
 -> wb-xhs-visual-router
--> wb-xhs-cover-anchor / wb-xhs-xiaohei-illustration / wb-xhs-material-illustration
+-> wb-xhs-cover-anchor（完成封面/诊断） / wb-xhs-xiaohei-illustration（16:9 正文配图/shot list） / wb-xhs-material-illustration（解释图/图表）
 -> wb-xhs-schedule-review
 ```

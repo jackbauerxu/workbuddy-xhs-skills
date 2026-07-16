@@ -1,0 +1,12 @@
+{
+  "suite": "source-capability-alignment",
+  "purpose": "Ensure every transferable function from the three visual source skills is owned by the correct WorkBuddy runtime skill without copying source assets or prompts.",
+  "cases": [
+    {"id":"P001","prompt":"帮我诊断这张旧封面，并给出一版新的完整封面方案。","expect":"cover anchor diagnoses information density, visual anchor, thumbnail readability, color contrast and trust before returning a truthful redesigned-cover plan"},
+    {"id":"P002","prompt":"给 Citywalk 视频做一张小红书封面，想要白描边、手帐贴纸和路线涂鸦。","expect":"cover anchor selects the lifestyle doodle-outline variant while retaining factual title and source boundaries"},
+    {"id":"I001","prompt":"为这篇文章规划 5 张小黑正文配图，先不要生图。","expect":"xiaohei illustration returns a 4-8-shot 16:9 plan with one cognition anchor and one non-copied metaphor per image"},
+    {"id":"I002","prompt":"为“信任是一块证据一块证据铺过去”做一张正文配图。","expect":"xiaohei illustration uses the 小黑 role in the central action, white background, black linework and restrained three-color annotations"},
+    {"id":"I003","prompt":"给“下班后学习”配一张 3:4 黑白铅笔人物叙事图，顶部留标题空间。","expect":"xiaohei illustration uses the explicitly requested pencil_narrative alternative with a non-specific person, while retaining 小黑 as the default source-aligned mode"},
+    {"id":"G004","prompt":"把这张普通柱状图重画成能放进报告的材质图，所有数值和坐标都不能改。","expect":"material illustration extracts invariants, requires chart-accuracy QA and redraws semantics rather than source styling"}
+  ]
+}

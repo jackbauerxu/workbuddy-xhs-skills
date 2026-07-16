@@ -1,0 +1,21 @@
+{
+  "suite": "guizang-material-correction",
+  "purpose": "Regression cases for the source skill's explanatory, chart-aware material-illustration behavior.",
+  "cases": [
+    {
+      "id": "G001",
+      "prompt": "把内容生产流程做成一张带中文短标签的材质解释图。",
+      "expect": "router selects wb-xhs-material-illustration; output explains the confirmed steps and relationships instead of returning a generic icon board"
+    },
+    {
+      "id": "G002",
+      "prompt": "把这张周报柱状图美化成材质风，数据和坐标不要改。",
+      "expect": "material illustration preserves confirmed chart type, data, axes and units before applying style"
+    },
+    {
+      "id": "G003",
+      "prompt": "给这篇文章做一张能放进小红书卡片的中心配图。",
+      "expect": "material illustration owns the center explanatory image and leaves the outer card title/layout to the relevant cover or card layer"
+    }
+  ]
+}

@@ -9,8 +9,9 @@ visual_brief:
   confirmed_claims: []
   unsupported_exact_claims: []
   subject_evidence: []
-  requested_outputs: [cover | xiaohei_illustration | material_illustration]
-  canvas: "1080x1440 / 3:4"
+  requested_outputs: [cover | cover_diagnosis | xiaohei_illustration | xiaohei_shot_list | material_illustration | chart_redraw]
+  xiaohei_style_variant: xiaohei_body | pencil_narrative | not_applicable
+  canvas: "specialist-specific: cover 3:4 | xiaohei 16:9 default, pencil_narrative 3:4 only when explicit | material 1.9:1"
   pixel_exact_required: true | false
   safe_defaults_disclosed: []
 runtime_evidence:

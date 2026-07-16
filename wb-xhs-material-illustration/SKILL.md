@@ -1,20 +1,39 @@
 ---
 name: wb-xhs-material-illustration
-description: Use when a Xiaohongshu content system needs reusable visual materials such as generic objects, process icons, column markers, or modular illustrations that can be recombined across posts without copying a source asset pack.
+description: Use when a Xiaohongshu post, article, work report, teaching material, or chart needs a material-style center explanation image, mechanism diagram, flow diagram, chart beautification, or reusable visual material with readable Chinese labels.
 ---
 
-# 小红书素材插画系统
+# 小红书材质解释图与素材
 
-把内容拆成可复用、可命名的素材单元：物件、动作、步骤、关系和栏目角标。每个单元要能独立使用，也能与封面标题共同服务同一主题。
+先让图片讲清一个已确认的概念、机制、流程、关系或数据结论，再决定是否导出其中可复用的物件、箭头和栏目组件。图片不是无字装饰，也不是完整小红书卡片；它是能放进卡片、PPT、文章或文档的**中心解释图**。
+
+## 负责的交付
+
+- 概念拆解、流程、循环、层级、对比、系统关系等解释图。
+- 图表语义重画：在确认信息基础上美化柱状图、折线图、漏斗图、甘特图、热力图等。
+- 从解释图中拆出的可复用物件、关系箭头、栏目角标和页面组件。
 
 ## 过程
 
-1. 从 Visual Brief 列出已确认概念、需要的素材数量和将出现的页面。
-2. 为每个素材写用途、语义、尺寸比例和禁用事实；优先通用物件或抽象流程，不画未经确认的真人案例。
-3. 建立统一的线条、色块、圆角和留白规则；导出可复用命名而非一次性大拼图。
-4. 若同一请求还要封面，先由路由器确认封面精确标题；素材完成后交给封面专家，不替其决定标题锚点。
-5. QA：素材之间风格一致、缩小仍可辨认、无来源混淆、文件状态真实可追溯。
+1. 从 Visual Brief 提取已确认的中心问题、对象、关系、数据、输出尺寸和外层页面用途；只选择一个主要解释目标。
+2. 判断画面类型：概念拆解、流程、循环、对比、层级、场景解释或图表美化。资料不足但主题明确时，用不含未证实结论的定性关系图；冷门概念或具体装置需要先补事实参考。
+3. 把画面压缩为一句说明和 3-5 个**图内短标签、箭头、图例、数据与关系**。标签必须来自已确认事实；中文短、具体、缩小后仍能读。
+4. 默认画布为 **wide horizontal 1.9:1** 的中心图位；也可按已确认外层页面改为 16:9 或 1:1。采用克制的 Swiss 编辑式信息层级、暖白底、黑色墨线、浅灰材质化 3D 物件和清晰空间关系；一张图只选一种高亮色，技术/工作流默认 IKB 蓝 `#002FA7`。先让关系可读，再增加可复用素材。
+5. 图表任务必须**保留图表类型、标题、数据、坐标、单位和结论**；只重画语义与视觉表达，不能改类别顺序、数值或暗示不存在的数据。生成提示词必须列出 `Required chart accuracy`，逐项写明刻度、类别、数值、单位、误差范围和“不可新增/交换类别”的约束。
+6. 若同一请求还要封面，先由路由器确认封面精确标题。此 skill 交付中心解释图；封面专家负责外层标题、承诺和 3:4 版式。
+7. QA：标签逐字准确、关系方向清楚、数据与单位可核验、缩放可读、裁切安全、来源边界与运行状态真实可追溯。
+
+## 交付格式
+
+- `explanation_type`：解释图 / 流程 / 循环 / 对比 / 层级 / 场景 / 图表。
+- `one_sentence`：本图说明的唯一关系或结论。
+- `confirmed_labels`：实际放入图内的短标签及其事实来源。
+- `chart_invariants`：图表任务必须保留的类型、数据、坐标、单位和结论；非图表则为 `not_applicable`。
+- `reference_cues`：冷门实体、品牌、科学装置或历史物件的稳定视觉线索；**参考只补事实**，不借用外部图片排版或风格。
+- `reusable_materials`：可从中心图拆出的物件、箭头、角标或组件。
 
 ## 边界
 
-本模块仅吸收 `op7418/guizang-material-illustration` 中“材料化、模块化组织”的可迁移思路。未检测到可复用的许可时，不复制其图片、成套素材、提示词或模板。
+- 不把空泛的“六个小图标”当作已经解释清内容；没有已确认关系时，先交付事实中性的结构，不编造数据或案例。
+- 不负责完整小红书卡片的标题与版式；中心图交给封面或外层页面再排版。
+- 本模块从 `op7418/guizang-material-illustration` 吸收“材质化解释图、图表语义重画、参考只补事实、中心图与外层卡片分工”的方法，不复制其图片、成套素材、提示词或模板。

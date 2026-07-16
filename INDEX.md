@@ -9,7 +9,7 @@
 - **作者**: 文子 (@Eejoylove)
 - **发布时间**: 2026-07-06
 - **一句话主旨**: 先从变现路径倒推账号，再用 WorkBuddy 把对标、记忆、选题、改稿、排期复盘串成小红书冷启动系统。
-- **融合补充**: 已融合 yanliudreamer 小红书系列、dbskill、xhs-visual-director-skill，以及封面锚点、黑白叙事插图、模块化素材组织的可迁移方法；视觉生产现在由 4 个独立 skills 交付。
+- **融合补充**: 已融合 yanliudreamer 小红书系列、dbskill、xhs-visual-director-skill，以及完成封面/诊断、16:9 小黑正文配图、材质解释图/图表美化的可迁移方法；视觉生产现在由 4 个独立 skills 交付。
 - **整篇理解**: [BOOK_OVERVIEW.md](./BOOK_OVERVIEW.md)
 - **精华长文**: [DIGEST.md](./DIGEST.md)
 - **术语词典**: [GLOSSARY.md](./GLOSSARY.md)
@@ -37,10 +37,10 @@
 
 ### 视觉生产
 
-- [`wb-xhs-visual-router`](./wb-xhs-visual-router/SKILL.md) — 预检视觉事实边界并把封面、黑白插图和素材请求交给正确专家。
-- [`wb-xhs-cover-anchor`](./wb-xhs-cover-anchor/SKILL.md) — 以证据、主体、对照或文字承诺构建可信 3:4 封面。
-- [`wb-xhs-xiaohei-illustration`](./wb-xhs-xiaohei-illustration/SKILL.md) — 用简洁黑白叙事插图表达已确认主题。
-- [`wb-xhs-material-illustration`](./wb-xhs-material-illustration/SKILL.md) — 建立可复用的栏目素材与图文说明组件。
+- [`wb-xhs-visual-router`](./wb-xhs-visual-router/SKILL.md) — 预检视觉事实边界并把完成封面/诊断、正文配图/shot list、解释图/图表请求交给正确专家。
+- [`wb-xhs-cover-anchor`](./wb-xhs-cover-anchor/SKILL.md) — 以事实、模板、诊断和缩略图规则构建可信的 3:4 完成封面。
+- [`wb-xhs-xiaohei-illustration`](./wb-xhs-xiaohei-illustration/SKILL.md) — 默认用小黑承担动作的 16:9 白底手绘图表达文章认知锚点；用户明确指定时可用 3:4 铅笔人物叙事变体。
+- [`wb-xhs-material-illustration`](./wb-xhs-material-illustration/SKILL.md) — 生成带短标签的材质解释图、图表美化与可复用组件。
 
 ## 引用图
 
@@ -72,7 +72,7 @@ graph LR
 7. `wb-xhs-schedule-review`
 8. `wb-xhs-visual-router`（需要图片时）
 
-视觉交付时按请求选择：封面 → `wb-xhs-cover-anchor`；黑白叙事插图 → `wb-xhs-xiaohei-illustration`；模块化素材 → `wb-xhs-material-illustration`。同时需要素材和封面时，先确认封面精确标题，再分别交接。
+视觉交付时按请求选择：完成封面/旧封面诊断 → `wb-xhs-cover-anchor`；16:9 小黑正文配图/shot list → `wb-xhs-xiaohei-illustration`；机制图、流程图、图表美化与可复用素材 → `wb-xhs-material-illustration`。同时需要素材和封面时，先确认封面精确标题，再分别交接。
 
 ## 安装使用
 

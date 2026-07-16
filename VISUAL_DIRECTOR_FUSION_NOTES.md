@@ -65,6 +65,6 @@
 ## 保持的边界
 
 - 本项目仍是 WorkBuddy XHS Skills，不替代独立的 XHS Visual Director Skill。
-- 现有 6 个运营 skills 只负责视觉字段和生产约束；实际视觉请求由 `wb-xhs-visual-router` 分流至封面、黑白叙事插图或模块化素材 skill。
+- 现有 6 个运营 skills 只负责视觉字段和生产约束；实际视觉请求由 `wb-xhs-visual-router` 分流至完成封面/诊断、16:9 小黑正文配图/shot list，或材质解释图/图表美化 skill。
 - 需要真正生成图片时，4 个视觉 skill 只在可用的专门图像工具中记录真实调用、保存和 QA；没有调用时明确为 `not_called`。
 - 本项目负责把“内容运营流程”接上“视觉交付字段和视觉交付”，让选题、正文、排期和复盘都能自然进入图文生产。

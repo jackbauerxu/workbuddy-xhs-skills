@@ -7,7 +7,7 @@
 - yanliudreamer 小红书系列中的起号、个人 IP、内容验证和长期增长方法
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main) 中适合小红书运营的标题、内容诊断、对标、共鸣、开头、文风和复盘模块
 - [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill) 中适合图文内容的视觉导演方法
-- [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system)、[helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)、[op7418/guizang-material-illustration](https://github.com/op7418/guizang-material-illustration) 中可迁移的封面锚点、黑白叙事和模块化素材组织方法
+- [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system)、[helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)、[op7418/guizang-material-illustration](https://github.com/op7418/guizang-material-illustration) 中可迁移的完成封面、16:9 小黑正文配图、材质化解释图与图表美化方法
 
 这不是一份文章摘要，而是一套可以被 Agent 调用的内容运营工作流。它覆盖小红书账号从 0 到稳定迭代的关键环节：定位、变现、对标、账号记忆、选题标题、初稿校准、图文拆页、视觉路由与图文视觉交付、发布排期和数据复盘。
 
@@ -24,22 +24,26 @@
 
 在此基础上，新增 4 个视觉生产技能，把“有一篇内容”推进到“能交付图文视觉”：
 
-- **视觉路由**：根据请求分流到封面、黑白叙事插图或模块化素材；缺少封面标题、来源或素材时，会先做最小且真实的预检。
-- **3:4 封面锚点**：用已确认的证据、主体、对照或文字承诺做手机端可读的封面，不把未经证实的数字、案例或结果画成事实。
-- **黑白叙事插图**：为职场、成长和方法类内容提供简洁的人物动作与情绪表达，保留标题留白。
-- **模块化素材插画**：把栏目、流程和工具内容拆成可重复使用的图标、物件、关系与页面组件。
+- **视觉路由**：根据请求分流到完成封面/封面诊断、16:9 小黑正文配图/shot list，或材质解释图/图表美化；缺少封面标题、来源或素材时，会先做最小且真实的预检。
+- **3:4 完成封面**：用已确认的证据、主体、对照或文字承诺做手机端可读的封面；支持模板选择、旧封面诊断、生活方式涂鸦描边和胶片拼贴变体。
+- **小黑正文配图**：为文章的判断、流程、状态和隐喻提供 16:9 纯白手绘配图与 4-8 张 shot list，小黑承担核心动作。
+- **材质化解释图与图表美化**：把机制、流程、层级和数据画成带短标签的宽幅中心图，再按需要拆出可复用素材。
 
 这些视觉技能与原有的选题、改稿、排期和复盘串联：有真实图像工具时记录生成、保存和 QA；没有调用工具时明确标记 `not_called`，不会虚构图片已经交付。
 
 ### 视觉生产示例
 
 <p align="center">
-  <img src="./assets/visual-examples/cover-anchor-example.png" width="31%" alt="3:4 封面锚点示例：忙不是成长" />
-  <img src="./assets/visual-examples/xiaohei-narrative-example.png" width="31%" alt="黑白叙事插图示例：下班后学习" />
-  <img src="./assets/visual-examples/material-illustration-example.png" width="31%" alt="模块化素材插画示例：六类可复用组件" />
+  <img src="./assets/visual-examples/cover-anchor-finished-example.png" width="28%" alt="3:4 完成封面示例：工作流别靠记忆" />
+</p>
+<p align="center">
+  <img src="./assets/visual-examples/xiaohei-body-illustration-example.png" width="47%" alt="16:9 小黑正文配图示例：碎片信息到选题" />
+  <img src="./assets/visual-examples/material-explanation-example.png" width="47%" alt="宽幅材质解释图示例：内容生产闭环" />
 </p>
 
-从左到右分别对应：`wb-xhs-cover-anchor`、`wb-xhs-xiaohei-illustration`、`wb-xhs-material-illustration`。它们都是仓库内原创示例，用于说明视觉交付方向，不代表真实数据、案例或客户成果。
+从左到右分别对应：`wb-xhs-cover-anchor` 的 3:4 完成封面、`wb-xhs-xiaohei-illustration` 的 16:9 正文配图、`wb-xhs-material-illustration` 的宽幅材质解释图。它们都是仓库内原创示例，用于说明视觉交付方向，不代表真实数据、案例或客户成果。
+
+原仓库的方法定义“哪些能力不能丢”，不是要求重复一张旧图。每次交付都要围绕当前内容重做主题、构图、隐喻和视觉重心；只有图表事实、用户已确认的标题与承诺、以及所选模式的基本画幅等约束不可自由改写。
 
 原始 WorkBuddy 文章：
 
@@ -88,8 +92,8 @@
 | 想拆低粉高数据样本为什么有效 | `wb-xhs-low-follower-pattern` |
 | 想把一篇内容落成 3:4 封面和 6-8 页图文 | `wb-xhs-topic-bank` + `wb-xhs-humanize-compliance` |
 | 要一张真实、可读的 3:4 封面 | `wb-xhs-visual-router` → `wb-xhs-cover-anchor` |
-| 要黑白手绘叙事插图 | `wb-xhs-visual-router` → `wb-xhs-xiaohei-illustration` |
-| 要一套可复用栏目素材 | `wb-xhs-visual-router` → `wb-xhs-material-illustration` |
+| 要 16:9 小黑正文配图或一篇文章的 shot list | `wb-xhs-visual-router` → `wb-xhs-xiaohei-illustration` |
+| 要机制图、流程图、图表美化或可复用素材 | `wb-xhs-visual-router` → `wb-xhs-material-illustration` |
 | 发了 10-20 条，不知道要不要收敛定位 | `wb-xhs-schedule-review` + `wb-xhs-account-profile` |
 
 ## 项目解决什么问题
@@ -104,7 +108,7 @@
 4. 用标题公式和用户底层需求建立选题库。
 5. 把优先选题补充成封面钩子、主视觉方向和图文页数建议。
 6. 对单篇初稿做人味化、结构诊断、图文拆页和发布前检查。
-7. 用视觉路由把内容交给封面、黑白叙事插图或模块化素材专家；在生成前检查标题、证据与事实边界。
+7. 用视觉路由把内容交给完成封面/封面诊断、小黑正文配图/shot list，或材质解释图/图表美化专家；在生成前检查标题、证据与事实边界。
 8. 用低粉高数据样本拆解可迁移的标题、封面、结构和互动机制，再回到自己的内容验证。
 9. 用 10-20 条内容数据复盘定位，并把内容和视觉结论写回账号档案。
 
@@ -127,10 +131,10 @@
 | 选题标题 | `wb-xhs-topic-bank` | 用七类选题公式、12 类标题触发器、五类用户需求和封面钩子生成选题库 |
 | 初稿校准 | `wb-xhs-humanize-compliance` | 诊断 AI 初稿，检查单一核心机制、5 秒开头、真人感、图文拆页和发布表达 |
 | 排期复盘 | `wb-xhs-schedule-review` | 制定前 10 条、7 天、30 天排期，并把内容生产和视觉生产放进复盘闭环 |
-| 视觉分流 | `wb-xhs-visual-router` | 为封面、黑白手绘和模块化素材选择专家，并保留真实运行状态 |
-| 封面锚点 | `wb-xhs-cover-anchor` | 用已确认事实做可读、可检验的 3:4 封面 |
-| 黑白叙事插图 | `wb-xhs-xiaohei-illustration` | 为泛化主题制作简洁黑白手绘叙事插图 |
-| 模块化素材 | `wb-xhs-material-illustration` | 为栏目、流程和图文页建立可复用素材单元 |
+| 视觉分流 | `wb-xhs-visual-router` | 为完成封面/诊断、小黑正文配图/shot list、材质解释图/图表美化选择专家，并保留真实运行状态 |
+| 完成封面 | `wb-xhs-cover-anchor` | 用已确认事实做可点、可检验的 3:4 封面，并可诊断旧封面 |
+| 小黑正文配图 | `wb-xhs-xiaohei-illustration` | 为文章制作 16:9 白底手绘认知配图和 4-8 张 shot list |
+| 材质解释图 | `wb-xhs-material-illustration` | 为机制、流程、图表和图文页建立带短标签的中心解释图与可复用素材 |
 
 ## 技能融合与更新摘要
 
@@ -213,28 +217,29 @@
 
 融合：
 
-- `ponyodong2026/ponyo-cover-anchor-system` 的四类可迁移封面锚点：证据、主体、对照、文字承诺。
-- 小红书 3:4、手机端可读、标题优先和事实中性兜底规则。
+- `ponyodong2026/ponyo-cover-anchor-system` 的信息密度 × 视觉锚点、冲突/数字/截图/情绪四类模板、旧封面诊断与完成封面提示词。
+- 生活方式封面的涂鸦描边小清新、阳光胶片拼贴白描边变体，以及 3:4 缩略图可读性规则。
+- 小红书事实边界：数字、截图、案例和主体只在已确认或已获授权时使用。
 
-核心变化：封面以已确认事实为锚；缺少证据时保留可信标题与构图骨架，不把未经证实的数据、案例或结果画成事实。
+核心变化：封面不只是一个标题骨架，而是可发布的完成封面与可量化诊断；缺少证据时仍保留可信标题与构图，不把未经证实的数据、案例或结果画成事实。
 
 ### 9. `wb-xhs-xiaohei-illustration`
 
 融合：
 
-- `helloianneo/ian-xiaohei-illustrations` 的简洁黑白叙事方向。
-- 小红书内容中的人物动作、情绪关系、标题留白和 3:4 页面用途。
+- `helloianneo/ian-xiaohei-illustrations` 的小黑角色、16:9 正文配图、shot list、白底手绘和怪诞认知隐喻。
+- 纯白背景、黑色细线、少量红橙蓝批注，以及“小黑必须承担核心动作”的 QA。
 
-核心变化：把抽象的职场、成长和方法主题转成一眼可读的叙事动作；只使用非特定人物与原创构图，不复制第三方角色或成图。
+核心变化：把文章中的判断、流程、状态和隐喻转成一眼可读的正文认知配图；保留 MIT 来源归属，重造每张图的隐喻，不复制示例成图或构图。
 
 ### 10. `wb-xhs-material-illustration`
 
 融合：
 
-- `op7418/guizang-material-illustration` 的模块化素材组织思路。
-- 栏目、流程、工具图文中可复用的物件、步骤、关系、角标和说明组件。
+- `op7418/guizang-material-illustration` 的材质化中心解释图、图表语义重画、参考只补事实与外层卡片分工。
+- 机制、流程、循环、层级、对比、图表以及从中心图拆出的物件、箭头、角标和说明组件。
 
-核心变化：把一次性配图变成可复用的组件系统；同时需要“素材 + 封面”时，先确认封面精确标题，再分别完成两种交付。
+核心变化：先让一张宽幅中心图讲清关系或数据，再沉淀可复用组件；同时需要“素材 + 封面”时，先确认封面精确标题，再分别完成两种交付。
 
 ## 推荐工作流
 
@@ -288,8 +293,8 @@ wb-xhs-topic-bank
 wb-xhs-topic-bank / wb-xhs-humanize-compliance
 -> wb-xhs-visual-router
 -> wb-xhs-cover-anchor（封面）
-   / wb-xhs-xiaohei-illustration（黑白叙事插图）
-   / wb-xhs-material-illustration（模块化素材）
+   / wb-xhs-xiaohei-illustration（16:9 正文配图 / shot list）
+   / wb-xhs-material-illustration（材质解释图 / 图表美化 / 可复用素材）
 -> wb-xhs-schedule-review（制作与复盘约束）
 ```
 
@@ -447,40 +452,49 @@ wb-xhs-topic-bank / wb-xhs-humanize-compliance
 适合这些问题：
 
 - “为这篇内容做一张小红书封面。”
-- “给这篇职场文章配黑白插图。”
-- “做一套栏目素材，再做封面。”
+- “诊断这张旧封面为什么没人点。”
+- “为这篇职场文章规划 5 张 16:9 小黑正文配图。”
+- “把内容生产流程做成带短标签的材质解释图。”
 
-它会先检查封面精确标题、可证实主张、主体证据和 3:4 画布要求；无来源的百分比、案例或结果只会被改写为经用户授权的定性表达。然后把任务交给封面、黑白插图或素材专家，并记录真实的生成、保存和 QA 状态。
+它会先检查封面精确标题、可证实主张、主体证据和与专家匹配的画布要求；无来源的百分比、案例或结果只会被改写为经用户授权的定性表达。然后把任务交给完成封面/诊断、小黑正文配图/shot list，或材质解释图/图表专家，并记录真实的生成、保存和 QA 状态。
 
 ### 8. `wb-xhs-cover-anchor`
 
-3:4 小红书封面设计技能。
+3:4 小红书完成封面与旧封面诊断技能。
 
-它会在可检视证据裁切、已授权主体、已确认前后对照和文字承诺四种锚点中选择一种，输出手机端仍可读的标题、构图与事实边界。没有可用证据或主体时使用事实中性的标题/留白骨架，而不是把未知结果画成真实案例。
+它用信息密度 × 视觉锚点选择冲突、数字、截图或情绪模板，输出模板、锚点、配色、字重层级与完成封面提示词；也可以把旧封面按信息密度、锚点、缩略图、对比和信任打分后改版。数字、截图、人物和案例必须已确认或获授权；没有可用证据时使用事实中性的标题/留白骨架，而不是把未知结果画成真实案例。
 
-![封面锚点示例：以“忙不是成长”作为文字承诺，不暗示未经证实的结果](./assets/visual-examples/cover-anchor-example.png)
+![完成封面示例：以“工作流别靠记忆”作为真实文字承诺，具有高对比标题与唯一视觉锚点](./assets/visual-examples/cover-anchor-finished-example.png)
 
-> 仓库内原创示例图：使用文字承诺锚点，展示标题、留白和中性支持物；不代表数据、案例或已交付的客户成果。
+> 仓库内原创示例图：展示一张完成封面的标题层级、色块与主体锚点；不代表数据、案例或已交付的客户成果。
 
 ### 9. `wb-xhs-xiaohei-illustration`
 
-黑白叙事插图技能，适合把“下班后学习”“沟通卡住”“从混乱到有序”等主题变成一眼可读的人物动作和情绪关系。
+小黑怪诞正文配图技能，默认适合把文章里的判断、流程、状态和隐喻变成一眼可读的 16:9 手绘解释图；先规划时会输出 4-8 张 shot list。
 
-它会输出单一叙事动作、主体留白和 3:4 页面用途说明；没有授权的人物素材时只使用非特定人物，不复制第三方角色、成图或真实人物形象。
+它用小黑承担核心动作，使用纯白背景、黑色细线和少量红橙蓝中文批注。一张图只讲一个认知锚点，并为当前文章重新发明隐喻；保留 MIT 来源归属，不复刻示例中的构图、角色动作或物件组合。
 
-![黑白叙事插图示例：下班后坐在书桌前学习的非特定人物，上方留出标题空间](./assets/visual-examples/xiaohei-narrative-example.png)
+![小黑正文配图示例：小黑把碎片信息拖入筛选漏斗，形成选题](./assets/visual-examples/xiaohei-body-illustration-example.png)
 
-> 仓库内原创示例图：通过“下班后学习”的单一动作表达主题，人物为非特定角色，顶部留白可由版式层放入标题。
+> 仓库内原创示例图：小黑以动作承担“碎片信息变选题”的单一隐喻；它是 16:9 正文配图，不是小红书封面。
+
+#### 可选：铅笔人物叙事
+
+用户明确提出“铅笔”“人物叙事”“3:4”或“顶部标题留白”时，可以切换到 `pencil_narrative`。这是一条按内容重做人物、动作和场景的创意分支，不替代小黑默认的 16:9 正文配图。
+
+![铅笔人物叙事示例：在桌前学习的人物，顶部保留标题空间](./assets/visual-examples/xiaohei-narrative-example.png)
+
+> 仓库内原创示例图：非特定人物以单一学习动作承载内容，未主张真实身份、成绩或案例。
 
 ### 10. `wb-xhs-material-illustration`
 
-模块化素材插画技能，适合为工具、流程、栏目和知识图文建立可重复使用的视觉组件。
+材质解释图与素材技能，适合为机制、流程、循环、层级、对比和图表建立带短标签的宽幅中心图，并按需要拆出可复用组件。
 
-它会把概念拆成物件、步骤、关系、角标和说明组件，并统一线条、色块、圆角和留白规则。用户同时要“素材 + 封面”时，先要求封面精确标题，再分别完成素材与封面，避免把素材拼图误当成封面设计。
+它用暖白底、黑色墨线、浅灰材质化 3D 物件和一种强调色，把已确认的关系画清楚；图表任务必须保留类型、标题、数值、类别顺序、坐标、单位和结论。它不负责整张小红书卡片，而是交付可放进卡片、PPT、文章或文档的中心图；用户同时要“素材 + 封面”时，先要求封面精确标题，再分别完成素材与封面。
 
-![模块化素材插画示例：清单、计时器、流程、文件夹、便签和灵感标记六类组件](./assets/visual-examples/material-illustration-example.png)
+![材质解释图示例：选题、成稿、发布与复盘构成内容生产闭环](./assets/visual-examples/material-explanation-example.png)
 
-> 仓库内原创示例图：六种可拆分、可复用的栏目组件，共用线条、色彩、圆角与留白规则；顶部留白可承接封面或栏目标题。
+> 仓库内原创示例图：用短标签、箭头和 IKB 蓝强调色说明内容生产闭环；图中的物件和箭头可以再拆成栏目组件。
 
 ## dbskill 提取了什么
 
@@ -503,7 +517,7 @@ wb-xhs-topic-bank / wb-xhs-humanize-compliance
 
 ## 视觉生产融合了什么
 
-本项目先参考 [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)，把视觉判断嵌入选题、改稿、账号档案和排期；本次再把真正的视觉交付拆成独立的路由、封面、黑白插图和模块化素材技能。
+本项目先参考 [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)，把视觉判断嵌入选题、改稿、账号档案和排期；本次再把真正的视觉交付拆成独立的路由、完成封面/诊断、小黑正文配图/shot list、材质解释图/图表美化技能。
 
 | 视觉导演模块 | 提取内容 | 落到本项目 |
 |---|---|---|
@@ -517,9 +531,9 @@ wb-xhs-topic-bank / wb-xhs-humanize-compliance
 
 | 新增来源 | 提取方式 | 落到本项目 |
 | --- | --- | --- |
-| `ponyodong2026/ponyo-cover-anchor-system` | 仅重写证据、主体、对照和文字四类封面锚点 | `wb-xhs-cover-anchor` |
-| `helloianneo/ian-xiaohei-illustrations` | 吸收简洁黑白叙事方向，保留 MIT 来源归属 | `wb-xhs-xiaohei-illustration` |
-| `op7418/guizang-material-illustration` | 仅吸收模块化素材组织思路 | `wb-xhs-material-illustration` |
+| `ponyodong2026/ponyo-cover-anchor-system` | 转译信息密度 × 视觉锚点、四类完成封面模板、封面诊断与两类生活方式变体 | `wb-xhs-cover-anchor` |
+| `helloianneo/ian-xiaohei-illustrations` | 以 MIT 来源归属转译 16:9 小黑正文配图、shot list、风格 DNA、角色动作与 QA | `wb-xhs-xiaohei-illustration` |
+| `op7418/guizang-material-illustration` | 转译材质化解释图、图表语义重画、参考只补事实与中心图/外层卡片分工 | `wb-xhs-material-illustration` |
 
 这三类新增融合均不复制第三方图片、角色、模板、素材包或未授权提示词；完整许可与边界见 [VISUAL_SKILLS_FUSION_NOTES.md](./VISUAL_SKILLS_FUSION_NOTES.md)。
 
@@ -537,12 +551,12 @@ wb-xhs-topic-bank / wb-xhs-humanize-compliance
 | yanliudreamer 小红书系列 | 补强起号、个人 IP、10-20 条验证、长期主义和爆款底层需求 |
 | dbskill | 只提取适合小红书的标题、内容诊断、对标、共鸣、开头、文风和状态记录模块 |
 | xhs-visual-director-skill | 提取视觉导演方法，转成运营技能的视觉字段与生产约束 |
-| ponyodong2026/ponyo-cover-anchor-system | 只重写可迁移的封面锚点，不复制模板或提示词 |
-| helloianneo/ian-xiaohei-illustrations | 参考黑白叙事方向并保留 MIT 来源归属，不复制角色或成图 |
-| op7418/guizang-material-illustration | 只吸收模块化素材组织思路，不复制素材包或模板 |
+| ponyodong2026/ponyo-cover-anchor-system | 转译封面模板、诊断指标和生活方式变体，不复制示例封面或完整提示词 |
+| helloianneo/ian-xiaohei-illustrations | 以 MIT 来源归属使用小黑正文配图方法，不复制示例成图或构图 |
+| op7418/guizang-material-illustration | 转译解释图、图表重画和参考规则，不复制素材包、示例图或完整提示词 |
 
 如果你只想做小红书账号冷启动，用本仓库即可。  
-如果你要把小红书内容做成封面、黑白插图或栏目素材，使用本仓库的 `wb-xhs-visual-router`；如果只做与小红书内容无关的单次图片生成，再直接使用通用图像工具。
+如果你要把小红书内容做成完成封面、16:9 正文配图、机制图或图表美化，使用本仓库的 `wb-xhs-visual-router`；如果只做与小红书内容无关的单次图片生成，再直接使用通用图像工具。
 
 ## 安装
 
@@ -593,15 +607,15 @@ cp -R wb-xhs-* ~/.claude/skills/
 ```
 
 ```text
-给这篇职场成长文章做 3:4 封面，标题是“忙不是成长”，不要编造数据或案例。
+给这篇职场成长文章做 3:4 完成封面，标题是“工作流别靠记忆”，不要编造数据或案例。
 ```
 
 ```text
-给“下班后学习”配一张黑白叙事插图：非特定人物、保留标题留白。
+为这篇文章规划 5 张小黑正文配图，先不要生图；每张都要是 16:9、白底、一个认知锚点。
 ```
 
 ```text
-为我的效率栏目做 6 个可复用素材，并配一张封面；封面标题是“工作流别再靠记忆”。
+把内容生产流程做成一张带中文短标签的材质解释图：选题、成稿、发布、复盘；需要放进小红书卡片时再配封面，标题是“工作流别靠记忆”。
 ```
 
 ## 目录结构
@@ -651,7 +665,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `DBSKILL_EXTRACTION_NOTES.md`：从 dbskill 提取并转译到小红书 skills 的模块说明
 - `VISUAL_DIRECTOR_FUSION_NOTES.md`：从 xhs-visual-director-skill 提取并转译到现有 skills 的视觉模块说明
 - `VISUAL_SKILLS_FUSION_NOTES.md`：本次新增视觉技能的来源、许可与不复制边界
-- `assets/visual-examples/`：README 中展示封面锚点、黑白叙事插图和模块化素材的原创示例图
+- `assets/visual-examples/`：README 中展示完成封面、16:9 小黑正文配图和宽幅材质解释图的原创示例图
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
 - `candidates/`：候选方法论单元

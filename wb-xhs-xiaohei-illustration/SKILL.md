@@ -1,19 +1,41 @@
 ---
 name: wb-xhs-xiaohei-illustration
-description: Use when a Xiaohongshu post needs a simple black-and-white hand-drawn narrative illustration, expressive character vignette, or light visual metaphor rather than a photographic cover or reusable icon set.
+description: Use when a Chinese article, post, blog, or methodology piece needs default 16:9 小黑 hand-drawn body illustrations, a multi-image shot list, or an explicitly requested 3:4 pencil-style human narrative variation rather than a cover, poster, or formal infographic.
 ---
 
-# 小黑叙事插图
+# 小黑怪诞正文配图
 
-根据已确认主题写一个“一眼能读懂”的动作或关系：人物在做什么、情绪张力在哪里、留白给什么文字。用黑白线条、简单轮廓和少量可辨认物件建立叙事，不把抽象观点伪装成真实人物经历。
+把中文文章里的判断、流程、状态和隐喻变成纯白、手绘、怪诞但清爽的正文配图。默认交付是**16:9 横版正文配图**，不是 3:4 封面、PPT 信息图或通用人物插画。
+
+## 默认交付
+
+- 单张正文配图，或一篇文章的 **4-8 张 shot list**。
+- 每张 shot 写明放置段落、核心意思、结构类型、小黑动作和 2-5 个中文批注建议。
+- 最终资产保存到 `assets/<article-slug>-illustrations/`；未调用图像工具时必须保留 `not_called`。
+- 默认 `style_variant` 是 `xiaohei_body`。只有用户明确提出铅笔、人物叙事、3:4 或顶部标题留白时，才可选择下面的 `pencil_narrative` 变体。
+
+## 创造的边界
+
+这里的风格 DNA 是一组可用的视觉语法，不是固定模板。保留默认交付的画幅、角色职责、留白和可读性；但必须围绕当前文章重新创造主题、动作、物件、构图、色彩重心和隐喻。不要为了“像原版”而复刻来源案例，也不要为了追求变化而丢掉正文配图应有的单一认知锚点。
+
+## 可选铅笔叙事变体
+
+`pencil_narrative` **仅在用户明确请求**“铅笔”“写实人物叙事”“3:4”或“顶部标题留白”时使用；它**不替代小黑默认**的 16:9 白底正文配图。
+
+- 采用 3:4 竖版、非特定人物、黑白铅笔线稿与干净白底；保留上方标题留白，用一个可信的工作、学习或生活动作承载文章意思。
+- 人物、道具和场景应随主题重新设计，不能暗示真实身份、未经证实的成绩或来源案例；除非用户要求，不叠加虚构数字、品牌、课程页或夸张成果。
+- 在交付中注明 `style_variant: pencil_narrative`、触发它的用户要求、画幅、留白位置和生成状态。若请求不够明确，仍回到 `xiaohei_body` 默认模式，或先提出最小澄清。
 
 ## 过程
 
-1. 从 Visual Brief 提取单一情绪、动作和页面用途。
-2. 选择一个可读隐喻；无法确认主体时，用非特定人物，不套用真实公众人物或原作者角色。
-3. 保持线条与留白可服务 3:4 手机阅读；文字由封面/版式层控制，插图不塞满事实主张。
-4. QA：动作可读、主体不被裁切、留白足够、无未经授权角色或素材。
+1. 读文章、段落、截图或主题，找出一个值得视觉化的认知锚点；每张图只表达**一个核心动作、结构、状态或隐喻**。
+2. 需要多图时，先给 4-8 张 shot list；单图只选择一种结构：流程、系统局部、前后对比、角色状态、概念隐喻、方法分层、地图路线或小漫画分镜。
+3. 为当前内容重新发明“物理动作 + 低科技物件”的隐喻，再让小黑承担核心动作；不复刻来源示例的物件或构图。
+4. 小黑的基础形态是**黑色实心、白点眼、细腿、空表情**；它是认真参与系统运转的荒诞工作者，不是角落贴纸、吉祥物或可爱卡通。
+5. 生成 16:9 横版、纯白背景、黑色细手绘线稿。主体约占 40-60%，保留大块白区；最多 5-8 处**红色、橙色、蓝色中文手写批注**。橙色只给主路径/箭头，红色只给重点/问题/结果，蓝色只给补充或系统状态。
+6. QA（`xiaohei_body`）：白底、16:9、小黑承担动作、隐喻非旧例复刻、主体不超过约 60%、短批注可读、没有课程页/PPT/UI/纸纹/渐变或左上角类型标题。
+7. QA（`pencil_narrative`）：确认用户已明确触发该变体、3:4 画幅、非特定人物、顶部留白和单一动作成立；它不能被标成小黑默认输出。
 
 ## 来源与边界
 
-本模块吸收 `helloianneo/ian-xiaohei-illustrations` 的“简洁黑白叙事插图”方向；该来源采用 MIT 许可，保留来源归属。本 skill 不复制其具体角色、成图或模板。
+本模块基于 `helloianneo/ian-xiaohei-illustrations` 的 MIT 许可，保留来源归属，并使用其“小黑参与核心动作”的可迁移角色与正文配图方法。不得复制其示例成图、既有构图、提示词或案例物件；同一主题也要重新发明隐喻。封面、长文排版和严格图表交给相邻视觉专家。

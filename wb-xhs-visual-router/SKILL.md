@@ -1,6 +1,6 @@
 ---
 name: wb-xhs-visual-router
-description: Use when a Xiaohongshu request needs a 3:4 cover, hand-drawn black-and-white illustration, reusable material illustration, or a combination of those visual deliverables, and the agent must choose the correct visual specialist and preserve a truthful production state.
+description: Use when a Xiaohongshu request needs a finished cover or cover diagnosis, 16:9 小黑 body illustration or shot list, an explicitly requested pencil narrative body-illustration variation, material explanation image or chart beautification, and the agent must choose the correct visual specialist and preserve a truthful production state.
 ---
 
 # 小红书视觉路由器
@@ -20,8 +20,10 @@ description: Use when a Xiaohongshu request needs a 3:4 cover, hand-drawn black-
 | 用户意图 | 交给 | 说明 |
 | --- | --- | --- |
 | 单张封面、标题锚点、证据可读性 | `wb-xhs-cover-anchor` | 专家决定锚点方向与封面 QA。 |
-| 黑白手绘、简笔人物、小黑式叙事插图 | `wb-xhs-xiaohei-illustration` | 专家决定线条、人物和留白。 |
-| 可复用图标、物件、流程或栏目素材 | `wb-xhs-material-illustration` | 专家决定素材系统与资产拆分。 |
+| 旧封面诊断或改版 | `wb-xhs-cover-anchor` | 专家评分信息密度、锚点、缩略图、对比和信任，再给完整改版方案。 |
+| 中文文章的正文配图、shot list、小黑式认知隐喻，或明确指定的铅笔人物叙事 | `wb-xhs-xiaohei-illustration` | 默认由专家交付 16:9 白底小黑配图；只有用户明确指定时才切换 3:4 `pencil_narrative`。 |
+| 机制图、流程图、图表美化或带短标签的解释图 | `wb-xhs-material-illustration` | 专家决定中心解释图、图表语义保真与可复用素材。 |
+| 可复用图标、物件、关系箭头或栏目素材 | `wb-xhs-material-illustration` | 专家先确认中心解释关系，再决定可拆出的素材系统。 |
 | 素材插画加封面 | 先完成精确标题预检；再按顺序交给素材专家和封面专家 | 两个专家各自保留方法所有权。 |
 
 ## 执行
