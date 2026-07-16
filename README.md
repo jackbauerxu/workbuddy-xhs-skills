@@ -2,7 +2,7 @@
 
 一套面向 Codex / Claude / WorkBuddy 等 Agent 的小红书冷启动与图文生产 Skills。
 
-它把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》中的方法，整理成 6 个可执行 skill，并进一步融合：
+它把 X Article《别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000》中的方法，整理成 10 个可执行 skill，并进一步融合：
 
 - yanliudreamer 小红书系列中的起号、个人 IP、内容验证和长期增长方法
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main) 中适合小红书运营的标题、内容诊断、对标、共鸣、开头、文风和复盘模块
@@ -55,6 +55,9 @@
 | 初稿太顺、太空、太像模板 | `wb-xhs-humanize-compliance` |
 | 想拆低粉高数据样本为什么有效 | `wb-xhs-low-follower-pattern` |
 | 想把一篇内容落成 3:4 封面和 6-8 页图文 | `wb-xhs-topic-bank` + `wb-xhs-humanize-compliance` |
+| 要一张真实、可读的 3:4 封面 | `wb-xhs-visual-router` → `wb-xhs-cover-anchor` |
+| 要黑白手绘叙事插图 | `wb-xhs-visual-router` → `wb-xhs-xiaohei-illustration` |
+| 要一套可复用栏目素材 | `wb-xhs-visual-router` → `wb-xhs-material-illustration` |
 | 发了 10-20 条，不知道要不要收敛定位 | `wb-xhs-schedule-review` + `wb-xhs-account-profile` |
 
 ## 项目解决什么问题
@@ -90,6 +93,10 @@
 | 选题标题 | `wb-xhs-topic-bank` | 用七类选题公式、12 类标题触发器、五类用户需求和封面钩子生成选题库 |
 | 初稿校准 | `wb-xhs-humanize-compliance` | 诊断 AI 初稿，检查单一核心机制、5 秒开头、真人感、图文拆页和发布表达 |
 | 排期复盘 | `wb-xhs-schedule-review` | 制定前 10 条、7 天、30 天排期，并把内容生产和视觉生产放进复盘闭环 |
+| 视觉分流 | `wb-xhs-visual-router` | 为封面、黑白手绘和模块化素材选择专家，并保留真实运行状态 |
+| 封面锚点 | `wb-xhs-cover-anchor` | 用已确认事实做可读、可检验的 3:4 封面 |
+| 黑白叙事插图 | `wb-xhs-xiaohei-illustration` | 为泛化主题制作简洁黑白手绘叙事插图 |
+| 模块化素材 | `wb-xhs-material-illustration` | 为栏目、流程和图文页建立可复用素材单元 |
 
 ## 推荐工作流
 
@@ -134,7 +141,7 @@ wb-xhs-topic-bank
 
 适合已经有一个主题或初稿，需要把标题、开头、正文结构和互动点调得更适合小红书。
 
-## 6 个 Skills 详细介绍
+## 10 个 Skills 详细介绍
 
 ### 1. `wb-xhs-monetization-backsolve`
 
@@ -279,6 +286,22 @@ wb-xhs-topic-bank
 - 下周 3-5 个调整动作
 - 需要写回账号档案的结论
 
+### 7. `wb-xhs-visual-router`
+
+视觉请求的唯一入口。它先处理精确标题、无来源数字和安全默认值，再把封面、黑白插图或素材系统交给正确专家。没有真实图片调用或保存时，会明确记录未调用状态，不会伪造交付。
+
+### 8. `wb-xhs-cover-anchor`
+
+用可检视证据、已授权主体、已确认对照或文字承诺四种锚点之一完成 3:4 封面；无证据时使用事实中性骨架，不把未知结果画成事实。
+
+### 9. `wb-xhs-xiaohei-illustration`
+
+为情绪、动作和关系设计黑白手绘叙事插图。它只使用通用人物和已确认主题，不复制来源角色或成图。
+
+### 10. `wb-xhs-material-illustration`
+
+把栏目概念拆成可复用的物件、步骤、关系和角标素材。与封面组合时，先确认封面精确标题，再分别交给素材与封面专家。
+
 ## dbskill 提取了什么
 
 本项目没有把小红书 skills 并入 dbskill，也没有依赖 dbskill 的运行入口。处理方式是：提取 dbskill 中适合小红书运营的判断模块，转译到现有 `wb-xhs-*` skills 里。
@@ -330,7 +353,7 @@ wb-xhs-topic-bank
 
 ## 安装
 
-复制 6 个 skill 目录到 Codex skills 目录：
+复制 10 个 skill 目录到 Codex skills 目录：
 
 ```bash
 cp -R wb-xhs-* ~/.codex/skills/
