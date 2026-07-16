@@ -448,17 +448,29 @@ wb-xhs-topic-bank / wb-xhs-humanize-compliance
 
 它会在可检视证据裁切、已授权主体、已确认前后对照和文字承诺四种锚点中选择一种，输出手机端仍可读的标题、构图与事实边界。没有可用证据或主体时使用事实中性的标题/留白骨架，而不是把未知结果画成真实案例。
 
+![封面锚点示例：以“忙不是成长”作为文字承诺，不暗示未经证实的结果](./assets/visual-examples/cover-anchor-example.png)
+
+> 仓库内原创示例图：使用文字承诺锚点，展示标题、留白和中性支持物；不代表数据、案例或已交付的客户成果。
+
 ### 9. `wb-xhs-xiaohei-illustration`
 
 黑白叙事插图技能，适合把“下班后学习”“沟通卡住”“从混乱到有序”等主题变成一眼可读的人物动作和情绪关系。
 
 它会输出单一叙事动作、主体留白和 3:4 页面用途说明；没有授权的人物素材时只使用非特定人物，不复制第三方角色、成图或真实人物形象。
 
+![黑白叙事插图示例：下班后坐在书桌前学习的非特定人物，上方留出标题空间](./assets/visual-examples/xiaohei-narrative-example.png)
+
+> 仓库内原创示例图：通过“下班后学习”的单一动作表达主题，人物为非特定角色，顶部留白可由版式层放入标题。
+
 ### 10. `wb-xhs-material-illustration`
 
 模块化素材插画技能，适合为工具、流程、栏目和知识图文建立可重复使用的视觉组件。
 
 它会把概念拆成物件、步骤、关系、角标和说明组件，并统一线条、色块、圆角和留白规则。用户同时要“素材 + 封面”时，先要求封面精确标题，再分别完成素材与封面，避免把素材拼图误当成封面设计。
+
+![模块化素材插画示例：清单、计时器、流程、文件夹、便签和灵感标记六类组件](./assets/visual-examples/material-illustration-example.png)
+
+> 仓库内原创示例图：六种可拆分、可复用的栏目组件，共用线条、色彩、圆角与留白规则；顶部留白可承接封面或栏目标题。
 
 ## dbskill 提取了什么
 
@@ -594,6 +606,8 @@ cp -R wb-xhs-* ~/.claude/skills/
 ├── DBSKILL_EXTRACTION_NOTES.md
 ├── VISUAL_DIRECTOR_FUSION_NOTES.md
 ├── VISUAL_SKILLS_FUSION_NOTES.md
+├── assets/
+│   └── visual-examples/
 ├── GLOSSARY.md
 ├── verified.md
 ├── candidates/
@@ -627,6 +641,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `DBSKILL_EXTRACTION_NOTES.md`：从 dbskill 提取并转译到小红书 skills 的模块说明
 - `VISUAL_DIRECTOR_FUSION_NOTES.md`：从 xhs-visual-director-skill 提取并转译到现有 skills 的视觉模块说明
 - `VISUAL_SKILLS_FUSION_NOTES.md`：本次新增视觉技能的来源、许可与不复制边界
+- `assets/visual-examples/`：README 中展示封面锚点、黑白叙事插图和模块化素材的原创示例图
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
 - `candidates/`：候选方法论单元
