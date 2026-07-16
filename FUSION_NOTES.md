@@ -186,3 +186,57 @@ wb-xhs-low-follower-pattern
 -> wb-xhs-schedule-review
 -> wb-xhs-account-profile
 ```
+
+## 2026-07-16 视觉生产融合补充
+
+原有 6 个运营技能继续保留各自的视觉字段：定位负责视觉信任假设、账号档案负责视觉身份、选题和改稿负责视觉 Brief、排期复盘负责制作与数据约束。真正的视觉交付则由以下 4 个独立 skill 负责，不再由运营 skill 越权代替。
+
+### wb-xhs-visual-router
+
+新增:
+
+- Visual Brief 交接。
+- 封面标题、来源、主体和事实边界预检。
+- 封面、黑白叙事插图、模块化素材三类请求分流。
+- 图片工具调用、保存和 QA 的真实状态记录。
+
+核心变化: 视觉请求有统一入口；没有真正调用工具时，输出必须明确是 `not_called`，不能把视觉方案表述成图片已交付。
+
+### wb-xhs-cover-anchor
+
+新增:
+
+- 从 `ponyodong2026/ponyo-cover-anchor-system` 转译的证据、主体、对照、文字承诺四类锚点。
+- 3:4 封面、手机端可读标题和事实中性兜底。
+
+核心变化: 封面从“凭空做一张好看图”变成“用可确认信息建立可信承诺”；不复制来源模板、提示词或成图。
+
+### wb-xhs-xiaohei-illustration
+
+新增:
+
+- 从 `helloianneo/ian-xiaohei-illustrations` 吸收的简洁黑白叙事方向。
+- 把主题转成非特定人物、动作、情绪关系和标题留白。
+
+核心变化: 抽象主题可以获得可读的叙事插图，同时保留 MIT 来源归属，不复制角色或成图。
+
+### wb-xhs-material-illustration
+
+新增:
+
+- 从 `op7418/guizang-material-illustration` 转译的模块化素材组织方法。
+- 可复用的物件、步骤、关系、角标和说明组件。
+- “素材 + 封面”任务中的封面标题预检与双交付拆分。
+
+核心变化: 栏目视觉从一次性配图升级为可复用组件系统；不复制来源素材包、模板或未授权提示词。
+
+## 更新后的推荐使用顺序
+
+需要把内容交付为图文视觉时:
+
+```text
+wb-xhs-topic-bank / wb-xhs-humanize-compliance
+-> wb-xhs-visual-router
+-> wb-xhs-cover-anchor / wb-xhs-xiaohei-illustration / wb-xhs-material-illustration
+-> wb-xhs-schedule-review
+```

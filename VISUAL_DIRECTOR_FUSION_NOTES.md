@@ -1,6 +1,6 @@
 # 视觉导演融合说明
 
-更新时间: 2026-07-07
+更新时间: 2026-07-16
 
 本次参考 [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)，把其中适合小红书冷启动系统的视觉导演方法提取到现有 `workbuddy-xhs-skills`。处理方式不是把视觉导演 skill 整包并入，而是把它转译成现有 6 个小红书运营 skills 的视觉交付字段。
 
@@ -65,5 +65,6 @@
 ## 保持的边界
 
 - 本项目仍是 WorkBuddy XHS Skills，不替代独立的 XHS Visual Director Skill。
-- 需要真正生成图片时，仍应使用专门的视觉生成工具或视觉导演 skill。
-- 本项目负责把“内容运营流程”接上“视觉交付字段”，让选题、正文、排期和复盘都能自然进入图文生产。
+- 现有 6 个运营 skills 只负责视觉字段和生产约束；实际视觉请求由 `wb-xhs-visual-router` 分流至封面、黑白叙事插图或模块化素材 skill。
+- 需要真正生成图片时，4 个视觉 skill 只在可用的专门图像工具中记录真实调用、保存和 QA；没有调用时明确为 `not_called`。
+- 本项目负责把“内容运营流程”接上“视觉交付字段和视觉交付”，让选题、正文、排期和复盘都能自然进入图文生产。
