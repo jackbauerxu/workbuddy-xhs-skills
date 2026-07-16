@@ -31,6 +31,16 @@
 
 这些视觉技能与原有的选题、改稿、排期和复盘串联：有真实图像工具时记录生成、保存和 QA；没有调用工具时明确标记 `not_called`，不会虚构图片已经交付。
 
+### 视觉生产示例
+
+<p align="center">
+  <img src="./assets/visual-examples/cover-anchor-example.png" width="31%" alt="3:4 封面锚点示例：忙不是成长" />
+  <img src="./assets/visual-examples/xiaohei-narrative-example.png" width="31%" alt="黑白叙事插图示例：下班后学习" />
+  <img src="./assets/visual-examples/material-illustration-example.png" width="31%" alt="模块化素材插画示例：六类可复用组件" />
+</p>
+
+从左到右分别对应：`wb-xhs-cover-anchor`、`wb-xhs-xiaohei-illustration`、`wb-xhs-material-illustration`。它们都是仓库内原创示例，用于说明视觉交付方向，不代表真实数据、案例或客户成果。
+
 原始 WorkBuddy 文章：
 
 [https://x.com/Eejoylove/status/2074028317498601870](https://x.com/Eejoylove/status/2074028317498601870)
