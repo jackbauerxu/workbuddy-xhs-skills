@@ -7,8 +7,9 @@
 - yanliudreamer 小红书系列中的起号、个人 IP、内容验证和长期增长方法
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main) 中适合小红书运营的标题、内容诊断、对标、共鸣、开头、文风和复盘模块
 - [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill) 中适合图文内容的视觉导演方法
+- [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system)、[helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)、[op7418/guizang-material-illustration](https://github.com/op7418/guizang-material-illustration) 中可迁移的封面锚点、黑白叙事和模块化素材组织方法
 
-这不是一份文章摘要，而是一套可以被 Agent 调用的内容运营工作流。它覆盖小红书账号从 0 到稳定迭代的关键环节：定位、变现、对标、账号记忆、选题标题、初稿校准、图文拆页、视觉方向、发布排期和数据复盘。
+这不是一份文章摘要，而是一套可以被 Agent 调用的内容运营工作流。它覆盖小红书账号从 0 到稳定迭代的关键环节：定位、变现、对标、账号记忆、选题标题、初稿校准、图文拆页、视觉路由与图文视觉交付、发布排期和数据复盘。
 
 ## 本次更新包含什么
 
@@ -59,6 +60,7 @@
 -> 规划前 10 条系统画像内容
 -> 生成选题库和标题
 -> 校准初稿与图文结构
+-> 视觉路由与封面/插图/素材交付
 -> 学习低粉高数据样本
 -> 用 10-20 条数据复盘定位
 -> 把结论写回账号档案
@@ -84,7 +86,7 @@
 
 很多人做小红书时，第一反应是让 AI “帮我写一篇”或“帮我起 20 个标题”。问题是，如果没有账号定位、变现路径、用户需求、标题公式、内容验证和复盘机制，AI 很容易只给出一堆看起来像小红书、但不适合自己账号的内容。
 
-这个项目把小红书冷启动拆成 7 个环节：
+这个项目把小红书冷启动拆成 9 个环节：
 
 1. 先从变现和 offer 倒推账号定位。
 2. 再建立账号档案，让 Agent 记住你是谁、服务谁、怎么说话。
@@ -92,7 +94,9 @@
 4. 用标题公式和用户底层需求建立选题库。
 5. 把优先选题补充成封面钩子、主视觉方向和图文页数建议。
 6. 对单篇初稿做人味化、结构诊断、图文拆页和发布前检查。
-7. 用 10-20 条内容数据复盘定位，并把内容和视觉结论写回账号档案。
+7. 用视觉路由把内容交给封面、黑白叙事插图或模块化素材专家；在生成前检查标题、证据与事实边界。
+8. 用低粉高数据样本拆解可迁移的标题、封面、结构和互动机制，再回到自己的内容验证。
+9. 用 10-20 条内容数据复盘定位，并把内容和视觉结论写回账号档案。
 
 ## 适合谁
 
@@ -128,6 +132,8 @@ wb-xhs-monetization-backsolve
 -> wb-xhs-schedule-review
 -> wb-xhs-topic-bank
 -> wb-xhs-humanize-compliance
+-> wb-xhs-visual-router
+-> wb-xhs-cover-anchor / wb-xhs-xiaohei-illustration / wb-xhs-material-illustration
 -> wb-xhs-low-follower-pattern
 -> wb-xhs-schedule-review
 ```
@@ -156,10 +162,24 @@ wb-xhs-schedule-review
 ```text
 wb-xhs-topic-bank
 -> wb-xhs-humanize-compliance
+-> wb-xhs-visual-router（需要封面、插图或素材时）
 -> wb-xhs-low-follower-pattern
 ```
 
 适合已经有一个主题或初稿，需要把标题、开头、正文结构和互动点调得更适合小红书。
+
+### 内容交付为图文视觉
+
+```text
+wb-xhs-topic-bank / wb-xhs-humanize-compliance
+-> wb-xhs-visual-router
+-> wb-xhs-cover-anchor（封面）
+   / wb-xhs-xiaohei-illustration（黑白叙事插图）
+   / wb-xhs-material-illustration（模块化素材）
+-> wb-xhs-schedule-review（制作与复盘约束）
+```
+
+路由器先确认封面精确标题、可证实的主张与安全默认值；只有真实调用图片工具时才会记录生成、保存和 QA。没有调用时，交付会明确标为 `not_called`。
 
 ## 10 个 Skills 详细介绍
 
@@ -308,19 +328,33 @@ wb-xhs-topic-bank
 
 ### 7. `wb-xhs-visual-router`
 
-视觉请求的唯一入口。它先处理精确标题、无来源数字和安全默认值，再把封面、黑白插图或素材系统交给正确专家。没有真实图片调用或保存时，会明确记录未调用状态，不会伪造交付。
+视觉请求的唯一入口，负责把一篇内容分流成正确的视觉交付。
+
+适合这些问题：
+
+- “为这篇内容做一张小红书封面。”
+- “给这篇职场文章配黑白插图。”
+- “做一套栏目素材，再做封面。”
+
+它会先检查封面精确标题、可证实主张、主体证据和 3:4 画布要求；无来源的百分比、案例或结果只会被改写为经用户授权的定性表达。然后把任务交给封面、黑白插图或素材专家，并记录真实的生成、保存和 QA 状态。
 
 ### 8. `wb-xhs-cover-anchor`
 
-用可检视证据、已授权主体、已确认对照或文字承诺四种锚点之一完成 3:4 封面；无证据时使用事实中性骨架，不把未知结果画成事实。
+3:4 小红书封面设计技能。
+
+它会在可检视证据裁切、已授权主体、已确认前后对照和文字承诺四种锚点中选择一种，输出手机端仍可读的标题、构图与事实边界。没有可用证据或主体时使用事实中性的标题/留白骨架，而不是把未知结果画成真实案例。
 
 ### 9. `wb-xhs-xiaohei-illustration`
 
-为情绪、动作和关系设计黑白手绘叙事插图。它只使用通用人物和已确认主题，不复制来源角色或成图。
+黑白叙事插图技能，适合把“下班后学习”“沟通卡住”“从混乱到有序”等主题变成一眼可读的人物动作和情绪关系。
+
+它会输出单一叙事动作、主体留白和 3:4 页面用途说明；没有授权的人物素材时只使用非特定人物，不复制第三方角色、成图或真实人物形象。
 
 ### 10. `wb-xhs-material-illustration`
 
-把栏目概念拆成可复用的物件、步骤、关系和角标素材。与封面组合时，先确认封面精确标题，再分别交给素材与封面专家。
+模块化素材插画技能，适合为工具、流程、栏目和知识图文建立可重复使用的视觉组件。
+
+它会把概念拆成物件、步骤、关系、角标和说明组件，并统一线条、色块、圆角和留白规则。用户同时要“素材 + 封面”时，先要求封面精确标题，再分别完成素材与封面，避免把素材拼图误当成封面设计。
 
 ## dbskill 提取了什么
 
@@ -341,9 +375,9 @@ wb-xhs-topic-bank
 
 [DBSKILL_EXTRACTION_NOTES.md](./DBSKILL_EXTRACTION_NOTES.md)
 
-## xhs-visual-director-skill 融合了什么
+## 视觉生产融合了什么
 
-本项目参考 [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)，提取小红书图文视觉导演方法，并转译为现有内容运营 skills 的视觉交付字段。
+本项目先参考 [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)，把视觉判断嵌入选题、改稿、账号档案和排期；本次再把真正的视觉交付拆成独立的路由、封面、黑白插图和模块化素材技能。
 
 | 视觉导演模块 | 提取内容 | 落到本项目 |
 |---|---|---|
@@ -352,6 +386,16 @@ wb-xhs-topic-bank
 | 8 页结构 | 封面、痛点、认知、方法、案例、操作、总结、引导 | `wb-xhs-humanize-compliance`, `wb-xhs-schedule-review` |
 | 统一视觉母版 | 1080x1440px、3:4、边距、网格、字体、色彩、组件语言 | `wb-xhs-account-profile`, `wb-xhs-schedule-review` |
 | 视觉审查 | 封面冲击、手机端可读、信息层级、风格统一、避免 PPT 感 | `wb-xhs-humanize-compliance`, `wb-xhs-low-follower-pattern` |
+
+### 新增视觉技能来源
+
+| 新增来源 | 提取方式 | 落到本项目 |
+| --- | --- | --- |
+| `ponyodong2026/ponyo-cover-anchor-system` | 仅重写证据、主体、对照和文字四类封面锚点 | `wb-xhs-cover-anchor` |
+| `helloianneo/ian-xiaohei-illustrations` | 吸收简洁黑白叙事方向，保留 MIT 来源归属 | `wb-xhs-xiaohei-illustration` |
+| `op7418/guizang-material-illustration` | 仅吸收模块化素材组织思路 | `wb-xhs-material-illustration` |
+
+这三类新增融合均不复制第三方图片、角色、模板、素材包或未授权提示词；完整许可与边界见 [VISUAL_SKILLS_FUSION_NOTES.md](./VISUAL_SKILLS_FUSION_NOTES.md)。
 
 详细说明见：
 
@@ -366,10 +410,13 @@ wb-xhs-topic-bank
 | WorkBuddy 原文 | 作为冷启动主线：变现倒推、账号档案、选题、改稿、排期复盘 |
 | yanliudreamer 小红书系列 | 补强起号、个人 IP、10-20 条验证、长期主义和爆款底层需求 |
 | dbskill | 只提取适合小红书的标题、内容诊断、对标、共鸣、开头、文风和状态记录模块 |
-| xhs-visual-director-skill | 只提取视觉导演方法，转成选题、改稿、账号档案和排期里的视觉交付字段 |
+| xhs-visual-director-skill | 提取视觉导演方法，转成运营技能的视觉字段与生产约束 |
+| ponyodong2026/ponyo-cover-anchor-system | 只重写可迁移的封面锚点，不复制模板或提示词 |
+| helloianneo/ian-xiaohei-illustrations | 参考黑白叙事方向并保留 MIT 来源归属，不复制角色或成图 |
+| op7418/guizang-material-illustration | 只吸收模块化素材组织思路，不复制素材包或模板 |
 
 如果你只想做小红书账号冷启动，用本仓库即可。  
-如果你只想做单次图片生成或完整视觉制图，可以继续调用独立的视觉导演或图像生成工具。
+如果你要把小红书内容做成封面、黑白插图或栏目素材，使用本仓库的 `wb-xhs-visual-router`；如果只做与小红书内容无关的单次图片生成，再直接使用通用图像工具。
 
 ## 安装
 
@@ -419,6 +466,18 @@ cp -R wb-xhs-* ~/.claude/skills/
 我已经发了 12 条，数据有起伏，帮我判断要不要收敛定位。
 ```
 
+```text
+给这篇职场成长文章做 3:4 封面，标题是“忙不是成长”，不要编造数据或案例。
+```
+
+```text
+给“下班后学习”配一张黑白叙事插图：非特定人物、保留标题留白。
+```
+
+```text
+为我的效率栏目做 6 个可复用素材，并配一张封面；封面标题是“工作流别再靠记忆”。
+```
+
 ## 目录结构
 
 ```text
@@ -430,16 +489,24 @@ cp -R wb-xhs-* ~/.claude/skills/
 ├── FUSION_NOTES.md
 ├── DBSKILL_EXTRACTION_NOTES.md
 ├── VISUAL_DIRECTOR_FUSION_NOTES.md
+├── VISUAL_SKILLS_FUSION_NOTES.md
 ├── GLOSSARY.md
 ├── verified.md
 ├── candidates/
 ├── rejected/
+├── tests/
+│   └── visual-skills/
+│       └── final-nine-retest/
 ├── wb-xhs-monetization-backsolve/
 ├── wb-xhs-low-follower-pattern/
 ├── wb-xhs-account-profile/
 ├── wb-xhs-topic-bank/
 ├── wb-xhs-humanize-compliance/
-└── wb-xhs-schedule-review/
+├── wb-xhs-schedule-review/
+├── wb-xhs-visual-router/
+├── wb-xhs-cover-anchor/
+├── wb-xhs-xiaohei-illustration/
+└── wb-xhs-material-illustration/
 ```
 
 每个 skill 目录包含：
@@ -455,6 +522,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `FUSION_NOTES.md`：融合 yanliudreamer 系列和 dbskill 模块后的方法补丁说明
 - `DBSKILL_EXTRACTION_NOTES.md`：从 dbskill 提取并转译到小红书 skills 的模块说明
 - `VISUAL_DIRECTOR_FUSION_NOTES.md`：从 xhs-visual-director-skill 提取并转译到现有 skills 的视觉模块说明
+- `VISUAL_SKILLS_FUSION_NOTES.md`：本次新增视觉技能的来源、许可与不复制边界
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
 - `candidates/`：候选方法论单元
@@ -477,6 +545,9 @@ cp -R wb-xhs-* ~/.claude/skills/
 - [0基础小红书教程(中)｜爆款内容怎么做+真实案例！](https://x.com/yanliudreamer/status/2073292022316966217)
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main)
 - [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)
+- [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system)
+- [helloianneo/ian-xiaohei-illustrations](https://github.com/helloianneo/ian-xiaohei-illustrations)
+- [op7418/guizang-material-illustration](https://github.com/op7418/guizang-material-illustration)
 
 本仓库只保留短引用、方法论重写和可执行工作流，不包含原文全文。
 

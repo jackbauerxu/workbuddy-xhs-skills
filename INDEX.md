@@ -2,19 +2,21 @@
 
 > 从公开长文方法论整理而来，产出 10 个可执行 Agent Skills。
 > 处理时间: 2026-07-07
+> 视觉生产更新: 2026-07-16
 
 ## 关于这篇文章
 
 - **作者**: 文子 (@Eejoylove)
 - **发布时间**: 2026-07-06
 - **一句话主旨**: 先从变现路径倒推账号，再用 WorkBuddy 把对标、记忆、选题、改稿、排期复盘串成小红书冷启动系统。
-- **融合补充**: 已融合 yanliudreamer 小红书系列，并提取 dbskill 与 xhs-visual-director-skill 中适合小红书场景的内容诊断、标题、对标、共鸣、视觉导演和复盘模块。
+- **融合补充**: 已融合 yanliudreamer 小红书系列、dbskill、xhs-visual-director-skill，以及封面锚点、黑白叙事插图、模块化素材组织的可迁移方法；视觉生产现在由 4 个独立 skills 交付。
 - **整篇理解**: [BOOK_OVERVIEW.md](./BOOK_OVERVIEW.md)
 - **精华长文**: [DIGEST.md](./DIGEST.md)
 - **术语词典**: [GLOSSARY.md](./GLOSSARY.md)
 - **融合说明**: [FUSION_NOTES.md](./FUSION_NOTES.md)
 - **dbskill 提取说明**: [DBSKILL_EXTRACTION_NOTES.md](./DBSKILL_EXTRACTION_NOTES.md)
 - **视觉导演融合说明**: [VISUAL_DIRECTOR_FUSION_NOTES.md](./VISUAL_DIRECTOR_FUSION_NOTES.md)
+- **视觉技能融合说明**: [VISUAL_SKILLS_FUSION_NOTES.md](./VISUAL_SKILLS_FUSION_NOTES.md)
 
 ## Skill 列表
 
@@ -69,6 +71,8 @@ graph LR
 6. `wb-xhs-low-follower-pattern`
 7. `wb-xhs-schedule-review`
 8. `wb-xhs-visual-router`（需要图片时）
+
+视觉交付时按请求选择：封面 → `wb-xhs-cover-anchor`；黑白叙事插图 → `wb-xhs-xiaohei-illustration`；模块化素材 → `wb-xhs-material-illustration`。同时需要素材和封面时，先确认封面精确标题，再分别交接。
 
 ## 安装使用
 
