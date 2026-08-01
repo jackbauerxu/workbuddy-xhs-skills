@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 280" role="img" aria-labelledby="title desc">
+  <title id="title">WorkBuddy XHS content loop</title>
+  <desc id="desc">A five-stage loop from positioning and topic selection to visual delivery, scheduling, and review.</desc>
+  <rect width="1200" height="280" rx="24" fill="#fffaf7"/>
+  <g font-family="ui-sans-serif,system-ui,sans-serif">
+    <g transform="translate(42 58)"><rect width="196" height="140" rx="16" fill="#fbe0d8"/><text x="20" y="34" font-size="12" letter-spacing="2" fill="#e94862">01</text><text x="20" y="76" font-family="Georgia,serif" font-size="24" fill="#3d2630">Position</text><text x="20" y="108" font-size="13" fill="#80515b">who / why / proof</text></g>
+    <g transform="translate(272 58)"><rect width="196" height="140" rx="16" fill="#ffe8d4"/><text x="20" y="34" font-size="12" letter-spacing="2" fill="#d47943">02</text><text x="20" y="76" font-family="Georgia,serif" font-size="24" fill="#3d2630">Select</text><text x="20" y="108" font-size="13" fill="#80515b">topic / title / hook</text></g>
+    <g transform="translate(502 58)"><rect width="196" height="140" rx="16" fill="#f8d3db"/><text x="20" y="34" font-size="12" letter-spacing="2" fill="#e94862">03</text><text x="20" y="76" font-family="Georgia,serif" font-size="24" fill="#3d2630">Shape</text><text x="20" y="108" font-size="13" fill="#80515b">draft / voice / compliance</text></g>
+    <g transform="translate(732 58)"><rect width="196" height="140" rx="16" fill="#ffe9ad"/><text x="20" y="34" font-size="12" letter-spacing="2" fill="#a67626">04</text><text x="20" y="76" font-family="Georgia,serif" font-size="24" fill="#3d2630">Show</text><text x="20" y="108" font-size="13" fill="#80515b">cover / illustration / QA</text></g>
+    <g transform="translate(962 58)"><rect width="196" height="140" rx="16" fill="#3d2630"/><text x="20" y="34" font-size="12" letter-spacing="2" fill="#ffb0a0">05</text><text x="20" y="76" font-family="Georgia,serif" font-size="24" fill="#fff5f0">Learn</text><text x="20" y="108" font-size="13" fill="#f2c9c3">schedule / review</text></g>
+  </g>
+  <g fill="none" stroke="#e94862" stroke-width="2"><path d="M238 128h28M468 128h28M698 128h28M928 128h28"/><path d="m252 121 12 7-12 7M482 121l12 7-12 7M712 121l12 7-12 7M942 121l12 7-12 7"/></g>
+</svg>
