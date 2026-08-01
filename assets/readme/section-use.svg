@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-labelledby="title desc">
+  <title id="title">03 — USE THE SYSTEM</title><desc id="desc">MAKE THE NEXT STEP REPEATABLE</desc>
+  <defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#fff" stroke-opacity=".08"/></pattern></defs>
+  <rect width="1200" height="150" rx="22" fill="#24172a"/><rect width="1200" height="150" rx="22" fill="url(#g)"/>
+  <text x="54" y="38" fill="#b8e4c5" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">03 · MAKE THE NEXT STEP REPEATABLE</text>
+  <rect x="54" y="53" width="74" height="4" rx="2" fill="#b8e4c5"/>
+  <text x="54" y="108" fill="#fff" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">USE THE SYSTEM</text>
+  <text x="1144" y="104" fill="#fff" fill-opacity=".46" text-anchor="end" font-family="Arial, sans-serif" font-size="12" letter-spacing="1">KEEP THE WORK VISIBLE</text>
+</svg>

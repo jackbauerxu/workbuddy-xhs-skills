@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="150" viewBox="0 0 1200 150" role="img" aria-labelledby="title desc">
+  <title id="title">01 — WHY THIS SYSTEM</title><desc id="desc">FIRST IMPRESSION</desc>
+  <defs><pattern id="g" width="24" height="24" patternUnits="userSpaceOnUse"><path d="M24 0H0V24" fill="none" stroke="#24172a" stroke-opacity=".08"/></pattern></defs>
+  <rect width="1200" height="150" rx="22" fill="#fff2e8"/><rect width="1200" height="150" rx="22" fill="url(#g)"/>
+  <text x="54" y="38" fill="#ff765d" font-family="Arial, sans-serif" font-size="12" font-weight="700" letter-spacing="2">01 · FIRST IMPRESSION</text>
+  <rect x="54" y="53" width="74" height="4" rx="2" fill="#ff765d"/>
+  <text x="54" y="108" fill="#24172a" font-family="Georgia, 'Times New Roman', serif" font-size="38" font-weight="700">WHY THIS SYSTEM</text>
+  <text x="1144" y="104" fill="#24172a" fill-opacity=".46" text-anchor="end" font-family="Arial, sans-serif" font-size="12" letter-spacing="1">KEEP THE WORK VISIBLE</text>
+</svg>
