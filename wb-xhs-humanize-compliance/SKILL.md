@@ -1,7 +1,7 @@
 ---
 name: wb-xhs-humanize-compliance
 description: |
-  Use when the user has an AI-generated Xiaohongshu draft and wants it to sound more personal, concrete, platform-appropriate, and stronger in hook, retention, and interaction value. Trigger phrases: "去 AI 味", "不像我", "合规检查", "改得像真人", "开头不抓人", "没停留", "humanize draft", "platform check". Do not use for initial positioning or topic generation.
+  Use when the user has an AI-generated Xiaohongshu draft and wants it to sound more personal, concrete, platform-appropriate, and stronger in hook, retention, interaction value, or pre-publish safety. Trigger phrases: "去 AI 味", "不像我", "合规检查", "发布前审", "能不能发", "改成能发", "违禁词", "限流风险", "改得像真人", "开头不抓人", "没停留", "humanize draft", "platform check". Do not use for initial positioning or topic generation.
 ---
 
 # 小红书初稿去 AI 味与发布检查
@@ -33,6 +33,8 @@ yanliudreamer 系列补充了发布前的内容质量检查：开头要给用户
 dbskill 的内容诊断模块补充了三条硬规则：先诊断再改写；一篇笔记只能有一个核心机制；开头 5 秒必须独立成立，包含话题、继续看的理由和可信证据。所谓 AI 味，常常来自“太顺、太满、太正确”，要用个人语言、真实意图和具体证据把它拉回人。
 
 xhs-visual-director-skill 补充了“图文可读性检查”：改稿时要判断这篇内容适合单图、长文、还是 6-8 页图文；如果要做图文，必须拆成封面、痛点、认知、方法、案例、操作、总结、引导等页面任务，并保证每页只讲一个主要信息。
+
+发布前审融合了 [yuwen-cool/yuwen-publish-precheck](https://github.com/yuwen-cool/yuwen-publish-precheck) 的可迁移方法（来源仓库为 CC BY-NC 4.0）：先做词面候选扫描，再做上下文与意图判断；命中候选不等于违规，零命中也不等于安全。这里只转译为小红书的可执行检查与保意修复，不复制来源规则库，也不提供绕审技巧。
 
 ## A1 — 文章中的应用
 
@@ -102,9 +104,13 @@ xhs-visual-director-skill 补充了“图文可读性检查”：改稿时要判
    - 按账号档案调整句长、语气、词汇和节奏。
    - 完成标准: 用户能判断“这像我会说的话”。
 
-9. **做发布检查**
-   - 检查绝对化表达、收益承诺、过度导向外部联系、夸张标题和不必要敏感表达。
-   - 完成标准: 输出“可发 / 需修改 / 暂不建议发”判断和修改点。
+9. **做发布前审与保意修复**
+   - 先确认内容身份：目标平台是否为小红书、是否商业内容、是否涉及健康/医美/金融/投资/教育等高风险行业，以及封面、图片、截图和案例是否属于正文的一部分。
+   - 先做词面候选扫描，再做语义复核：检查绝对化、收益/效果保证、夸张标题、外部联系方式或站外导向、虚假身份/虚构案例、未授权截图、版权风险、标题—封面—正文承诺不一致等；候选命中只是复核入口，不直接判违规，零命中也不能直接判安全。
+   - 对小红书特别检查：把评论区/私信导流写成平台内动作；不使用谐音、拼音、拆字、表情或图片藏字来规避审核；商业内容按实际关系和平台要求做清楚披露；医疗、投资、收入、教育结果等只保留有证据且边界清楚的表达。
+   - 按保意修复梯度处理：①补披露或必要声明；②补可核验来源/证据；③收窄断言与适用范围；④最小改写，尽量保留原钩子和账号口吻；⑤仍无法支持时删除或暂缓发布。禁止把规避审核当作修复方案。
+   - 改写后重新复核全文、标题、封面文字、图片文字和行动引导，并记录仍待用户确认的事实、授权或平台规则问题。
+   - 完成标准: 输出“可发 / 需修改 / 暂不建议发”，并按“必须改 / 建议改 / 待确认”列出证据、风险、具体替换文本和复检结果；不承诺绝对不违规或一定不被限流。
 
 10. **转成图文页面结构**
    - 如果用户要发图文，按 3:4 手机端阅读拆成 6-8 页: 封面、痛点、认知、方法、案例、操作、总结、引导。
@@ -132,6 +138,9 @@ xhs-visual-director-skill 补充了“图文可读性检查”：改稿时要判
 - 只做润色，不先说明问题来自标题承诺、表达效率、证据还是结构。
 - 把长文硬塞成图文，导致每页文字过多、手机端不可读。
 - 只改正文，不判断封面、内页和结尾页各自承担什么任务。
+- 把关键词命中当成最终判定，或把没有命中关键词当成安全证明。
+- 用谐音、拼音、拆字、表情、图片藏字等方式规避平台审核。
+- 把没有来源的数字、收益、案例或效果写成事实；把平台经验当成当前官方规则。
 
 ### 作者盲点
 
@@ -149,3 +158,4 @@ xhs-visual-director-skill 补充了“图文可读性检查”：改稿时要判
 - **验证通过**: V1 ✓ / V2 ✓ / V3 ✓
 - **测试通过率**: prompts prepared
 - **蒸馏时间**: 2026-07-07
+- **发布前审融合**: 2026-08-01，参考 `yuwen-cool/yuwen-publish-precheck` 的两层预审、保意修复与复检方法；来源为 CC BY-NC 4.0，未复制其规则库。
