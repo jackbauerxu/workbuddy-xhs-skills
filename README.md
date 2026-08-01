@@ -6,9 +6,13 @@
 
 它不是“生成一篇文案”的按钮，而是一张可以反复走的内容工作台：先回答账号为什么值得做，再决定写什么、怎么改、怎样配图、何时发布，以及下一轮要根据什么证据复盘。
 
+![01 · FIRST IMPRESSION：WorkBuddy XHS 内容工作台](assets/readme/section-why.svg)
+
 ## 30 秒看懂
 
-![WorkBuddy XHS 内容循环：定位、选题、改稿、视觉、学习](assets/readme/content-loop.svg)
+![WorkBuddy XHS 内容循环：定位、选题、改稿、视觉、学习](assets/readme/workflow.svg)
+
+![WorkBuddy XHS 项目对象展示：账号承诺、视觉路由和复盘记忆](assets/readme/showcase.svg)
 
 | 入口 | 解决的问题 | 主要交付 |
 | --- | --- | --- |
@@ -50,6 +54,8 @@
 - **材质化解释图与图表美化**：把机制、流程、层级和数据画成带短标签的宽幅中心图，再按需要拆出可复用素材。
 
 这些视觉技能与原有的选题、改稿、排期和复盘串联：有真实图像工具时记录生成、保存和 QA；没有调用工具时明确标记 `not_called`，不会虚构图片已经交付。
+
+![03 · USE THE SYSTEM：从证据走到图文交付](assets/readme/section-use.svg)
 
 ### 视觉生产示例
 
