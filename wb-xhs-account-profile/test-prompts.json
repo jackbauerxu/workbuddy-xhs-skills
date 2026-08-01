@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-account-profile",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列 + 2026-07-29 内容节奏文章",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -73,6 +73,13 @@
       "prompt": "帮我建账号档案时，也把我的小红书封面风格、配色、字体、内页组件和禁用视觉风格记下来。",
       "expected_behavior": "应激活本 skill，在账号档案中加入视觉身份规则，包括画幅、主/辅助风格、色彩令牌、字体系统、封面规则和视觉反模式。",
       "notes": "融合 xhs-visual-director 后的视觉身份档案场景。"
+    },
+    {
+      "id": "should-trigger-persona-vertical-01",
+      "type": "should_trigger",
+      "prompt": "我前期想先做 AI 职场内容，稳定后也想分享旅行和生活，帮我判断哪些能放进主号，哪些放小号。",
+      "expected_behavior": "应激活本 skill，区分内容垂直与人设垂直，按同一成长语境判断主号延展，并给出小号/矩阵边界。",
+      "notes": "来自内容节奏文章的人设垂直规则。"
     }
   ],
   "minimum_pass_rate": 0.8

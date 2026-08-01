@@ -2,6 +2,7 @@
 
 > 从公开长文方法论整理而来，产出 10 个可执行 Agent Skills。
 > 处理时间: 2026-07-07
+> 内容节奏与管线更新: 2026-08-01
 > 视觉生产更新: 2026-07-16
 
 ## 关于这篇文章
@@ -9,7 +10,7 @@
 - **作者**: 文子 (@Eejoylove)
 - **发布时间**: 2026-07-06
 - **一句话主旨**: 先从变现路径倒推账号，再用 WorkBuddy 把对标、记忆、选题、改稿、排期复盘串成小红书冷启动系统。
-- **融合补充**: 已融合 yanliudreamer 小红书系列、dbskill、xhs-visual-director-skill，以及完成封面/诊断、16:9 小黑正文配图、材质解释图/图表美化的可迁移方法；视觉生产现在由 4 个独立 skills 交付。
+- **融合补充**: 已融合 yanliudreamer 小红书系列、dbskill、xhs-visual-director-skill，以及完成封面/诊断、16:9 小黑正文配图、材质解释图/图表美化的可迁移方法；视觉生产现在由 4 个独立 skills 交付。2026-08-01 新增内容管线、阶段节奏、拉新/信任/标签循环和人设垂直过渡规则。
 - **整篇理解**: [BOOK_OVERVIEW.md](./BOOK_OVERVIEW.md)
 - **精华长文**: [DIGEST.md](./DIGEST.md)
 - **术语词典**: [GLOSSARY.md](./GLOSSARY.md)
@@ -33,7 +34,7 @@
 ### 发布与迭代
 
 - [`wb-xhs-humanize-compliance`](./wb-xhs-humanize-compliance/SKILL.md) — 对 AI 初稿做人味化、单一核心机制、5 秒开头、图文拆页和平台表达检查。
-- [`wb-xhs-schedule-review`](./wb-xhs-schedule-review/SKILL.md) — 制定前 10 条/30 天排期，并把内容生产、视觉生产和 10-20 条数据复盘写回账号档案。
+- [`wb-xhs-schedule-review`](./wb-xhs-schedule-review/SKILL.md) — 先判阶段、增长任务和库存，再制定前 10 条/30 天排期，把内容生产、视觉生产和 10-20 条数据复盘写回账号档案；详细节奏见 [`references/content-rhythm-model.md`](./wb-xhs-schedule-review/references/content-rhythm-model.md)。
 
 ### 视觉生产
 

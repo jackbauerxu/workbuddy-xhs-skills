@@ -1,7 +1,7 @@
 ---
 name: wb-xhs-account-profile
 description: |
-  Use when the user wants WorkBuddy or another agent to remember an account's positioning, voice, boundaries, data, trust assets, personal IP story, and content rules across sessions. Trigger phrases: "账号档案", "记住我的账号", "写入记忆", "人设垂直", "信任名片", "brand profile", "account memory", "style guide". Do not use for one-off post drafting unless profile data is missing.
+  Use when the user wants WorkBuddy or another agent to remember an account's positioning, voice, boundaries, data, trust assets, personal IP story, content rules, content pipeline, or the transition from content verticality to persona verticality across sessions. Trigger phrases: "账号档案", "记住我的账号", "写入记忆", "人设垂直", "内容垂直", "内容库存", "成长轨迹", "信任名片", "brand profile", "account memory", "style guide". Do not use for one-off post drafting unless profile data is missing.
 ---
 
 # WorkBuddy 账号档案构建
@@ -20,6 +20,10 @@ Before using any external program, browser automation, package, API client, or l
 >
 > — yanliudreamer, X Article, 2026-06-07
 
+> "从 0 到 1 万粉，本质是找到方向、建立标签、积累信任。"
+>
+> — yanliudreamer, X Article《0基础小红书教程(下)｜从0到1万粉：内容节奏怎么排？》, 2026-07-29
+
 ## I — 方法论骨架
 
 WorkBuddy 的价值不只是回答一次问题，而是长期协作。长期协作的前提是它知道账号是谁、说什么、不说什么、为什么可信、已经验证过什么。
@@ -33,6 +37,8 @@ yanliudreamer 系列补充了小红书的个人 IP 特性：用户关注的不�
 dbskill 的内容和文风诊断补充了两个字段：个人语言样本、可信主张清单。前者记录用户真实会说的话、不会说的话、常用句式；后者记录用户能证明的观点、结果、案例和 offer。后续改稿、选题和复盘都应回到这两类资产。
 
 xhs-visual-director-skill 补充了“视觉身份档案”：账号档案不仅要记住怎么说话，也要记住图文长什么样。视觉身份包括默认画幅、主风格、辅助风格、色彩令牌、字体令牌、封面规则、内页组件、禁用风格和视觉参考。
+
+内容节奏文章进一步要求档案保存三类长期资产：**方向资产**（我持续解决什么问题）、**标签资产**（用户和平台如何记住我）、**信任资产**（我亲自经历过什么、能证明什么）。档案还应记录内容管线的输入、加工、库存与输出状态，让“稳定更新”来自可管理的系统，而不是每天等待灵感。
 
 ## A1 — 文章中的应用
 
@@ -53,6 +59,8 @@ xhs-visual-director-skill 补充了“视觉身份档案”：账号档案不仅
 4. 用户已有数据和踩坑记录，想让 Agent 下次自动参考。
 5. 用户想从“内容垂直”过渡到“人设垂直”，但怕发散。
 6. 用户想把自己的经历、专业、审美和生活方式整理成可复用表达资产。
+7. 用户已经有稳定主线，想判断旅行、读书、生活等内容能否接入主号。
+8. 用户想把内容库存、系列候选和成长轨迹写入账号记忆。
 
 ### 语言信号
 
@@ -61,6 +69,9 @@ xhs-visual-director-skill 补充了“视觉身份档案”：账号档案不仅
 - "这个文案不像我"
 - "帮我整理个人IP"
 - "我的人设怎么垂直"
+- "内容垂直还是人设垂直"
+- "这条生活内容要不要放主号"
+- "帮我记住内容库存和成长轨迹"
 - "account profile"
 - "brand memory"
 
@@ -88,23 +99,30 @@ xhs-visual-director-skill 补充了“视觉身份档案”：账号档案不仅
    - 完成标准: 后续内容不会只靠语气取信，而是有证据和边界。
 
 5. **定义人设垂直规则**
-   - 区分早期内容垂直和中期人设垂直：哪些话题是主线，哪些是可被主线接住的延展，哪些应放小号或不发。
-   - 完成标准: 不把垂直理解成只能发单一题材，而是围绕同一个人设语境延展。
+   - 区分早期内容垂直和中期人设垂直：早期让用户和平台先形成稳定预期；稳定后判断哪些话题能被同一条成长语境、价值观或专业身份接住，哪些应放小号或矩阵。
+   - 完成标准: 输出 `main_topics`、`persona_extensions`、`secondary_account_candidates` 和每个判断的“为什么仍然像同一个人”。
 
-6. **建立视觉身份规则**
+6. **登记三类长期资产与内容管线**
+   - `direction_assets`: 主赛道、持续解决的问题、不能随意漂移的内容边界。
+   - `label_assets`: 系列、固定栏目、核心主题词、稳定视觉和用户形成的记忆点。
+   - `trust_assets`: 真实经历、方法、失败复盘、作品/结果、评论区认可和可以公开的证据。
+   - 同时记录 `input_slots`、`processing_slots`、`inventory_days`、`planned_outputs`，让档案能支持排期，而不只是描述风格。
+   - 完成标准: 另一个 Agent 能从档案判断一条新内容是在拉新、建立信任还是强化标签，以及库存风险在哪里。
+
+7. **建立视觉身份规则**
    - 记录默认画幅、主视觉风格、辅助风格、色彩令牌、字体系统、封面标题比例、内页组件、图标/线条语言和禁用视觉反模式。
    - 完成标准: 另一个 Agent 能判断“这张封面像不像这个账号”，以及哪些风格不该用。
 
-7. **写成账号档案**
-   - 输出 `账号档案.md`，包含定位卡、信任资产、个人语言样本、可信主张、语气规则、视觉身份、禁区、内容栏目、对标公式、数据日志、人设延展规则。
+8. **写成账号档案**
+   - 输出 `账号档案.md`，包含定位卡、方向/标签/信任资产、个人语言样本、可信主张、语气规则、视觉身份、禁区、内容栏目、对标公式、数据日志、内容管线和人设延展规则。
    - 完成标准: 另一个 Agent 只读此文件也能判断该不该写某类内容。
 
-8. **生成记忆写入指令**
+9. **生成记忆写入指令**
    - 给出可直接对 WorkBuddy 使用的指令，例如“请记住以下账号信息，并在后续内容生成中自动参考”。
    - 完成标准: 用户可复制使用。
 
-9. **建立更新机制**
-   - 每周把表现最好的内容、失败原因、禁用表达、评论区认可点、私信问题、表现好的封面和失效视觉风格加入档案。
+10. **建立更新机制**
+   - 每周把表现最好的内容、失败原因、禁用表达、评论区认可点、私信问题、表现好的封面和失效视觉风格加入档案；同步更新方向、标签、信任三类资产，以及输入—加工—库存—输出状态。
    - 完成标准: 档案不是静态简介，而是可迭代资产。
 
 ## 直接请求账号档案时
@@ -127,6 +145,9 @@ xhs-visual-director-skill 补充了“视觉身份档案”：账号档案不仅
 - 建完档案后不更新数据和经验。
 - 只写内容标签，不写这个人为什么可信、可亲近、可持续关注。
 - 人设延展过宽，导致系统和用户都不知道账号主线。
+- 账号还没形成稳定认知就急着把所有兴趣放进主号，或稳定后仍把“内容垂直”误解成只能发单一题材。
+- 只记录爆款结果，不记录能让用户信任的经历、判断和成长轨迹。
+- 记录了“想发什么”，却没有记录库存和加工状态，导致排期仍被灵感绑架。
 - 没有个人语言样本，后续改稿只能凭抽象形容词猜口吻。
 - 没有可信主张和 offer 边界，内容容易越写越空。
 - 只记录文案语气，不记录封面、配色、字体和页面结构偏好。
@@ -147,4 +168,4 @@ xhs-visual-director-skill 补充了“视觉身份档案”：账号档案不仅
 
 - **验证通过**: V1 ✓ / V2 ✓ / V3 ✓
 - **测试通过率**: prompts prepared
-- **蒸馏时间**: 2026-07-07
+- **内容节奏融合**: 2026-08-01，新增方向/标签/信任资产、内容管线与内容垂直 → 人设垂直过渡规则。

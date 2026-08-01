@@ -21,7 +21,8 @@
 - **选题库与标题公式**：持续生成能落地的选题、标题和封面钩子。
 - **初稿校准**：减少 AI 味，强化开头、结构、真人感和发布表达。
 - **发布前审与保意修复**：对小红书正文、标题、封面文字、图片文字和行动引导做两层预审；区分候选命中与语义违规，按披露、证据、收窄断言、最小改写、删除/暂缓的梯度修复，并在改写后复检。
-- **排期与数据复盘**：规划前 10 条、30 天内容节奏，并将有效结论写回下一轮生产。
+- **内容节奏与管线**：把输入、加工、库存、输出串成内容管线；按 0–1000、1000–5000、5000–10000、10000+ 阶段安排试错、放大、系统化和飞轮，并把拉新、信任、标签循环写进复盘。
+- **排期与数据复盘**：规划前 10 条、30 天内容节奏，保留库存缓冲，把有效结论写回下一轮生产。
 
 在此基础上，新增 4 个视觉生产技能，把“有一篇内容”推进到“能交付图文视觉”：
 
@@ -77,6 +78,7 @@
 -> 规划前 10 条系统画像内容
 -> 生成选题库和标题
 -> 校准初稿与图文结构
+-> 建立输入-加工-库存-输出管线
 -> 视觉路由与封面/插图/素材交付
 -> 学习低粉高数据样本
 -> 用 10-20 条数据复盘定位
@@ -89,7 +91,7 @@
 |---|---|
 | 不知道做什么账号，也不知道未来卖什么 | `wb-xhs-monetization-backsolve` |
 | 每次让 AI 写内容，都不像你本人 | `wb-xhs-account-profile` |
-| 不知道前 10 条怎么发 | `wb-xhs-schedule-review` |
+| 不知道前 10 条怎么发，或不知道内容库存和阶段节奏怎么排 | `wb-xhs-schedule-review` |
 | 缺选题、缺标题、缺封面钩子 | `wb-xhs-topic-bank` |
 | 初稿太顺、太空、太像模板 | `wb-xhs-humanize-compliance` |
 | 想拆低粉高数据样本为什么有效 | `wb-xhs-low-follower-pattern` |
@@ -98,6 +100,7 @@
 | 要 16:9 小黑正文配图或一篇文章的 shot list | `wb-xhs-visual-router` → `wb-xhs-xiaohei-illustration` |
 | 要机制图、流程图、图表美化或可复用素材 | `wb-xhs-visual-router` → `wb-xhs-material-illustration` |
 | 发了 10-20 条，不知道要不要收敛定位 | `wb-xhs-schedule-review` + `wb-xhs-account-profile` |
+| 想把一批题分成拉新、信任、标签，或今天没灵感 | `wb-xhs-topic-bank` |
 
 ## 项目解决什么问题
 
@@ -111,9 +114,10 @@
 4. 用标题公式和用户底层需求建立选题库。
 5. 把优先选题补充成封面钩子、主视觉方向和图文页数建议。
 6. 对单篇初稿做人味化、结构诊断、图文拆页和发布前检查。
-7. 用视觉路由把内容交给完成封面/封面诊断、小黑正文配图/shot list，或材质解释图/图表美化专家；在生成前检查标题、证据与事实边界。
-8. 用低粉高数据样本拆解可迁移的标题、封面、结构和互动机制，再回到自己的内容验证。
-9. 用 10-20 条内容数据复盘定位，并把内容和视觉结论写回账号档案。
+7. 建立输入、加工、库存、输出的内容管线，按账号阶段设置节奏假设和库存缓冲。
+8. 用视觉路由把内容交给完成封面/封面诊断、小黑正文配图/shot list，或材质解释图/图表美化专家；在生成前检查标题、证据与事实边界。
+9. 用低粉高数据样本拆解可迁移的标题、封面、结构和互动机制，再回到自己的内容验证。
+10. 用 10-20 条内容数据复盘定位，并把拉新、信任、标签和人设延展结论写回账号档案。
 
 ## 适合谁
 
@@ -134,7 +138,7 @@
 | 选题标题 | `wb-xhs-topic-bank` | 用七类选题公式、12 类标题触发器、五类用户需求和封面钩子生成选题库 |
 | 初稿校准 | `wb-xhs-humanize-compliance` | 诊断 AI 初稿，检查单一核心机制、5 秒开头、真人感、图文拆页和发布表达 |
 | 发布前审 | `wb-xhs-humanize-compliance` | 结合两层候选扫描与语义复核，检查导流、承诺、证据、版权、商业披露和封面—正文一致性，并做保意修复与复检 |
-| 排期复盘 | `wb-xhs-schedule-review` | 制定前 10 条、7 天、30 天排期，并把内容生产和视觉生产放进复盘闭环 |
+| 排期复盘 | `wb-xhs-schedule-review` | 先判阶段、增长任务和库存，再制定前 10 条、7 天、30 天排期，把内容/视觉生产和数据复盘放进内容管线 |
 | 视觉分流 | `wb-xhs-visual-router` | 为完成封面/诊断、小黑正文配图/shot list、材质解释图/图表美化选择专家，并保留真实运行状态 |
 | 完成封面 | `wb-xhs-cover-anchor` | 用已确认事实做可点、可检验的 3:4 封面，并可诊断旧封面 |
 | 小黑正文配图 | `wb-xhs-xiaohei-illustration` | 为文章制作 16:9 白底手绘认知配图和 4-8 张 shot list |
@@ -175,6 +179,20 @@
 - 视觉导演的画幅、色彩、字体、组件和禁用反模式组成的视觉身份。
 
 核心变化：账号档案从静态风格说明升级为可持续更新的“信任名片 + 内容与视觉记忆”。
+
+### 3.1 内容节奏融合（2026-08-01）
+
+来源：[0基础小红书教程(下)｜从0到1万粉：内容节奏怎么排？](https://x.com/yanliudreamer/status/2082352054584955109)
+
+融合进 `wb-xhs-account-profile`、`wb-xhs-topic-bank` 和 `wb-xhs-schedule-review` 的能力：
+
+- **内容管线**：记录输入素材、加工中的选题/初稿/视觉 Brief、可发布库存与输出计划；发布前尽量保持约两周缓冲，库存低时先补库存或降低承诺。
+- **增长循环**：每条内容标注主要任务——拉新、建立信任或强化标签，并把对应的方向、标签、信任资产写回档案。
+- **阶段模型**：0–1000 试错，1000–5000 放大有效主题，5000–10000 建立固定栏目与系列，10000+ 形成爆款迭代、合集、评论和内容互相带流量的飞轮。
+- **人设过渡**：早期保持内容方向相对垂直；认知稳定后按共同的人设/成长语境接入旅行、读书或生活内容，无法被主线解释的内容放小号或矩阵。
+- **无灵感模板**：问题（用户痛点）→ 经验（自己的经历/动作）→ 观点（自己的判断），必须填入真实素材，不生成空泛鸡汤。
+
+四阶段比例和每周 5–7 条等数字仅是可调的实验起点，不是平台规则、固定处方或涨粉承诺。详细输出契约见 [`wb-xhs-schedule-review/references/content-rhythm-model.md`](./wb-xhs-schedule-review/references/content-rhythm-model.md)。
 
 ### 4. `wb-xhs-topic-bank`
 
@@ -565,7 +583,7 @@ wb-xhs-topic-bank / wb-xhs-humanize-compliance
 | 项目 | 本仓库如何使用 |
 |---|---|
 | WorkBuddy 原文 | 作为冷启动主线：变现倒推、账号档案、选题、改稿、排期复盘 |
-| yanliudreamer 小红书系列 | 补强起号、个人 IP、10-20 条验证、长期主义和爆款底层需求 |
+| yanliudreamer 小红书系列 | 补强起号、个人 IP、10-20 条验证、长期主义、爆款底层需求、内容管线、阶段节奏和人设垂直 |
 | dbskill | 只提取适合小红书的标题、内容诊断、对标、共鸣、开头、文风和状态记录模块 |
 | xhs-visual-director-skill | 提取视觉导演方法，转成运营技能的视觉字段与生产约束 |
 | ponyodong2026/ponyo-cover-anchor-system | 转译封面模板、诊断指标和生活方式变体，不复制示例封面或完整提示词 |
@@ -682,6 +700,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - `DBSKILL_EXTRACTION_NOTES.md`：从 dbskill 提取并转译到小红书 skills 的模块说明
 - `VISUAL_DIRECTOR_FUSION_NOTES.md`：从 xhs-visual-director-skill 提取并转译到现有 skills 的视觉模块说明
 - `VISUAL_SKILLS_FUSION_NOTES.md`：本次新增视觉技能的来源、许可与不复制边界
+- `wb-xhs-schedule-review/references/content-rhythm-model.md`：内容管线、四阶段节奏、增长循环和库存风险输出契约
 - `assets/visual-examples/`：README 中展示完成封面、16:9 小黑正文配图和宽幅材质解释图的原创示例图
 - `GLOSSARY.md`：术语表
 - `verified.md`：通过三重验证的方法论单元
@@ -703,6 +722,7 @@ cp -R wb-xhs-* ~/.claude/skills/
 - [小红书运营 (下)：0-20万粉，有关变现，个人IP，长期主义](https://x.com/yanliudreamer/status/2064531701783732656)
 - [0基础小红书起号教程(上)｜从0到第一波流量（保姆级）](https://x.com/yanliudreamer/status/2071450551808938105)
 - [0基础小红书教程(中)｜爆款内容怎么做+真实案例！](https://x.com/yanliudreamer/status/2073292022316966217)
+- [0基础小红书教程(下)｜从0到1万粉：内容节奏怎么排？](https://x.com/yanliudreamer/status/2082352054584955109)
 - [dontbesilent2025/dbskill](https://github.com/dontbesilent2025/dbskill/tree/main)
 - [ziguishian/xhs-visual-director-skill](https://github.com/ziguishian/xhs-visual-director-skill)
 - [ponyodong2026/ponyo-cover-anchor-system](https://github.com/ponyodong2026/ponyo-cover-anchor-system)

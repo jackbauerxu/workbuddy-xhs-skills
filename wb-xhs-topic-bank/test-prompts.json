@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-topic-bank",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列 + 2026-07-29 内容节奏文章",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -73,6 +73,20 @@
       "prompt": "我的定位是 AI 效率工具号，帮我出一组选题库，每个选题都要附封面钩子、主视觉方向和适合做几页图文。",
       "expected_behavior": "应激活本 skill，生成选题和标题，并为优先选题补充内容类型、传播目标、封面钩子、主视觉方向、推荐风格和页数建议。",
       "notes": "融合 xhs-visual-director 后的视觉交付字段。"
+    },
+    {
+      "id": "should-trigger-growth-loop-01",
+      "type": "should_trigger",
+      "prompt": "帮我把这批选题分成拉新、建立信任、强化标签三类，并说明每类要留下什么资产。",
+      "expected_behavior": "应激活本 skill，为每个题目标注主要增长任务、用户需求、内容承诺和可沉淀的方向/信任/标签资产。",
+      "notes": "来自内容节奏文章的三件事循环。"
+    },
+    {
+      "id": "should-trigger-fallback-template-01",
+      "type": "should_trigger",
+      "prompt": "我今天完全没灵感，但想发一条真实内容，给我一个问题、经验、观点的选题模板。",
+      "expected_behavior": "应激活本 skill，使用问题—经验—观点模板，并要求填入用户自己的经历、判断和具体场景，不生成空泛鸡汤。",
+      "notes": "内容节奏文章提供的日常起号兜底模板。"
     }
   ],
   "minimum_pass_rate": 0.8

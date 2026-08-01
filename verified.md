@@ -120,3 +120,23 @@ V3_exclusivity:
   why_not_common: "不是普通日历，而是把节奏、类型和数据判断连成闭环。"
 ```
 
+## F07 内容节奏与内容管线
+
+```yaml
+id: F07
+title: 内容节奏与内容管线
+type: workflow
+source: yanliudreamer 0基础小红书教程(下), 2026-07-29
+V1_cross_domain:
+  passed: true
+  evidence:
+    - 文章将创作、储备、发布区分为不同节奏环节
+    - 文章给出从试错到内容飞轮的阶段模型
+V2_predictive_power:
+  passed: true
+  novel_question: "账号今天没有库存，但又承诺日更，下一步应该做什么？"
+  derived_answer: "先标记库存风险，优先补库存或降低发布承诺；固定频率不是完成标准。"
+V3_exclusivity:
+  passed: true
+  why_not_common: "它把排期从发布时间表升级成输入、加工、库存、输出的内容管线，并把拉新、信任、标签和人设垂直放入复盘。"
+```

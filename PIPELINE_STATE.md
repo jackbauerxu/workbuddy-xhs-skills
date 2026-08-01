@@ -4,6 +4,7 @@
 - Author: 文子 (@Eejoylove)
 - Published: 2026-07-06
 - Current stage: Stage 5 complete
+- Latest fusion: 2026-08-01 content rhythm and content pipeline update
 
 ## Checklist
 
@@ -14,6 +15,16 @@
 - [x] Stage 3: skill linking and glossary
 - [x] Stage 4: test prompts written
 - [x] Stage 5: digest and install-ready skill directories
+
+## Content rhythm fusion — 2026-08-01
+
+- [x] Added yanliudreamer X Article `2082352054584955109` as a traced source.
+- [x] Added content pipeline contract: input, processing, inventory, output.
+- [x] Added acquisition / trust / label growth loop.
+- [x] Added four-stage starting model and inventory-risk handling.
+- [x] Added content-vertical → persona-vertical transition and main-account/secondary-account boundary.
+- [x] Added question → experience → opinion fallback topic template.
+- [x] Added focused prompt cases and source/reference documentation.
 
 ## Skills Produced
 

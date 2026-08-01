@@ -1,7 +1,7 @@
 {
   "skill": "wb-xhs-schedule-review",
   "version": "0.1.0",
-  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列",
+  "source_book": "别不信！ WorkBuddy 就可以把你的小红书从0粉干到1000 — 文子 + yanliudreamer 小红书系列 + 2026-07-29 内容节奏文章",
   "darwin_compatible": true,
   "test_cases": [
     {
@@ -73,6 +73,27 @@
       "prompt": "帮我排下周小红书计划，要标注哪些做单图、哪些做 8 页图文，以及视觉确认图和最终图的制作时间。",
       "expected_behavior": "应激活本 skill，排期不只安排发布时间，还安排图文制作任务、视觉母版、确认图、最终图和视觉审查。",
       "notes": "融合 xhs-visual-director 后的图文生产排期场景。"
+    },
+    {
+      "id": "should-trigger-rhythm-01",
+      "type": "should_trigger",
+      "prompt": "我现在 0-1000 粉，帮我按内容节奏排一周，并告诉我需要留多少库存。",
+      "expected_behavior": "应激活本 skill，判定为试错期，给出拉新/信任/标签目标、可调整的内容比例、输入-加工-库存-输出管线和缓冲建议。",
+      "notes": "来自 2026-07-29 内容节奏文章的阶段模型。"
+    },
+    {
+      "id": "should-trigger-rhythm-02",
+      "type": "should_trigger",
+      "prompt": "我 1000-5000 粉，最近有 3 条表现很好，下一周该不该继续做系列？",
+      "expected_behavior": "应激活本 skill，要求拆解高反馈内容的共同点，优先做系列延伸和优化版本，同时保留少量新题测试。",
+      "notes": "放大期的系列化与比例调整。"
+    },
+    {
+      "id": "edge-rhythm-01",
+      "type": "edge_case",
+      "prompt": "我没有库存，今天必须发一条，帮我现写现发。",
+      "expected_behavior": "应激活本 skill，但先标记库存风险；优先使用已验证素材或降低发布承诺，不能把固定日更当成硬指标。",
+      "notes": "内容管线低库存边界。"
     }
   ],
   "minimum_pass_rate": 0.8
